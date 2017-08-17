@@ -1,4 +1,4 @@
-
+<?php include_once 'main_header.php' ?>;
 <!doctype html>
 <html class="no-js" lang="">
 <head>
@@ -77,8 +77,10 @@
             <div class="contact-page-area">
                 <div class="container-fluid">
                     <div class="row">                               
-                        <div class="google-map-area">                               
-                            <div id="googleMap" style="width:100%; height:460px;"></div>
+                        <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">                               
+                            
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2882374991705!2d78.3790404144398!3d17.445912988043627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93de32844057%3A0x7fbdb09406d44f7a!2sLancius+IT+Solutions!5e0!3m2!1sen!2sin!4v1502975594292" width="100%"height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            
                         </div>
                     </div>
                 </div>
@@ -98,7 +100,7 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                <div class="form-group">
-                                                    <input type="email" placeholder="Email*" class="form-control" name="email" id="form-email" data-error="Email field is required" required>
+                                                    <input type="email" placeholder="Email*" class="form-control" name="email" id="form-email" data-error="Email field is required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
@@ -126,10 +128,10 @@
                                 <h2 class="title-table">Contact Information</h2>
                                 <div class="contact-info-inner">
                                     <ul>
-                                        <li><i class="fa fa-phone" aria-hidden="true"></i>+91-999-999-9999</li>
-                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>support@Medischreibe.com</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i><?php echo $getSiteSettingsData['mobile']; ?></li>
+                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><?php echo $getSiteSettingsData['email']; ?></li>
                                         
-                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Address of the company will be display here</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo $getSiteSettingsData['address']; ?></li>
                                     </ul>
                                     <p>Don`t hesitate to talk</p>
                                 </div>
