@@ -8,9 +8,9 @@
                                         <p>All of our team members come from diverse cultural and business back grounds and have worked among many businesses.</p>
                                     </div>
                                     <ul class="corporate-address">
-                                        <li><i class="fa fa-phone" aria-hidden="true"></i>+91-999-999-9999</li>
-                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@medischreibe.com</li>
-                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i>info@medischreibe.com</li>
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $getSiteSettingsData['mobile']; ?>"><?php echo $getSiteSettingsData['mobile']; ?> </a></li>
+                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="<?php echo $getSiteSettingsData['email'];?>">info@medisripe.com</a></li>
+                                        
                                     </ul>
                                     
                                 </div>
@@ -32,11 +32,10 @@
                                         </div>
                                     </div>
                                     <ul class="footer-social">
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?php echo $getSiteSettingsData['fb_link']; ?>"  target="_blank"><i class="fa fa-facebook fb" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?php echo $getSiteSettingsData['twitter_link'];?>" target="_blank" <i class="fa fa-twitter tw" aria-hidden="true"></i></a></li>
+                                        <li><a href="<?php echo $getSiteSettingsData['gplus_link'];?>" target="_blank" <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        
                                     </ul>
                                 </div>
                             </div>
