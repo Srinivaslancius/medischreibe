@@ -33,11 +33,11 @@ $id = $_GET['uid'];
                     echo "Sorry, there was an error uploading your file.";
                 }
             }  else {
-                $sql = "UPDATE `services` SET title = '$title', status='$status' WHERE id = '$id' ";
+                $sql = "UPDATE `key_practices` SET title = '$title',,year = '$year',description = '$description', status='$status' WHERE id = '$id' ";
                 if($conn->query($sql) === TRUE){
-                   echo "<script>alert('Data Updated Successfully');window.location.href='services.php';</script>";
+                   echo "<script>alert('Data Updated Successfully');window.location.href='key_practices.php';</script>";
                 } else {
-                   echo "<script>alert('Data Updation Failed');window.location.href='services.php';</script>";
+                   echo "<script>alert('Data Updation Failed');window.location.href='key_practices.php';</script>";
                 }
             }   
             
