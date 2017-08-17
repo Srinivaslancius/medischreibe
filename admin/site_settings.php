@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="input-field col s12">
                                     <input id="title" type="url" class="validate" name="gplus_link" required value="<?php echo $getSiteSettingsData['gplus_link'];?>">
-                                    <label for="title">Google + Link</label>
+                                    <label for="title">Linkedin + Link</label>
                                 </div>
                                 <div class="input-field col s12">
                                     <input id="title" type="text" class="validate" name="mobile" maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" required value="<?php echo $getSiteSettingsData['mobile'];?>">

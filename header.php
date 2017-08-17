@@ -6,7 +6,7 @@
                                     <div class="header-top-left">
                                         <ul>
                                             <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $getSiteSettingsData['mobile']; ?>"><?php echo $getSiteSettingsData['mobile']; ?> </a></li>
-                                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@medisripe.com</a></li>
+                                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="<?php echo $getSiteSettingsData['email'];?>">info@medisripe.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
