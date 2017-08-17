@@ -1,5 +1,5 @@
 <?php include_once "main_header.php"; ?>       
-        
+
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
                 <div class="bend niceties preview-1">
@@ -427,7 +427,7 @@
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <div class="booking-table-area">
                                 <h2 class="title-table">Enquiry Now</h2>
-                                <form id="booking-form" class="booking-table-inner">           
+                                <form action="enquiry.php" method="post" id="booking-form" class="booking-table-inner">           
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <input type="text" class="form-control" placeholder="Name" name="name" id="form-name" data-error="Subject field is required" required />
@@ -436,23 +436,23 @@
                                             <input type="text" class="form-control" placeholder="E-mail" name="email" id="form-subject" data-error="Subject field is required" required/>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" class="form-control" placeholder="Phone" name="phone" id="form-phone" data-error="Subject field is required" required/>
+                                            <input type="text" class="form-control" placeholder="Phone" name="phone" id="form-phone" data-error="Subject field is required" maxlength="10"  pattern="[0-9]{10}" onkeypress="return isNumberKey(event)" required/>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <input type="text" class="form-control" placeholder="Type of Service" name="phone" id="form-service" data-error="Subject field is required" required/>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
-                                            <input type="text" class="form-control rt-date" placeholder="Date" name="date" id="form-date" data-error="Subject field is required" required/>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
-                                            <input type="text" class="form-control rt-time" placeholder="Time" name="time" id="form-time" data-error="Subject field is required" required/>
-                                        </div>
+                                        </div> -->
+                                        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                             <i class="fa fa-calendar" aria-hidden="true"></i> -->
+                                            <!--<input type="text" class="form-control rt-date" placeholder="Date" name="date" id="form-date" data-error="Subject field is required" required/>
+                                        </div> -->
+                                        <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                             <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+                                            <!--<input type="text" class="form-control rt-time" placeholder="Time" name="time" id="form-time" data-error="Subject field is required" required/>
+                                        </div> -->
                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <textarea class="form-control" placeholder="Message" name="message" id="form-message" data-error="Message field is required" required></textarea>
                                         </div>
-                                        <button type="submit" class="book-now-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                        <button type="submit" name="submit"class="book-now-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                         <div class='form-response'></div>
                                     </div>
                                 </form> 
@@ -667,3 +667,12 @@
             <!-- Department 2 Area End Here -->             
           
         <?php include_once 'main_footer.php';?>
+
+        <script type="text/javascript">
+            function isNumberKey(evt){
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+            }
+        </script>
