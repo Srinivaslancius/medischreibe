@@ -9,13 +9,13 @@
                         <div class="card">
                             <div class="card-content">
                                  <!-- <a href="add_categories.php" style="float:right">Add Categories</a> -->
-                                <span class="card-title">Categories</span>
+                                <span class="card-title">DEPARTMENT</span>
                                 <?php $getData = getAllDataWithActiveRecent('categories'); $i=1; ?>
                                 <table id="example" class="display responsive-table datatable-example">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Category Name</th>
+                                            <th>Department Name</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>                                    
