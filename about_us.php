@@ -1,4 +1,5 @@
 <?php include_once "main_header.php"; ?>
+<?php $getAboutData = getIndividualDetails('1',"content_pages","id");  ?>
            
             <!-- Inner Page Banner Area Start Here -->
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
@@ -24,12 +25,9 @@
                                 <div class="about-content-details">
                                     <div class="title-area">
                                         <span class="sub-title">We Are<span> Medicative</span></span>
-                                        <h2 class="title title-bar">About Medischreibe</h2>
+                                        <h2 class="title title-bar"><?php echo $getAboutData['title']; ?></h2>
                                     </div> 
-                                    <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
-                                    <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
-                                    <p>Our team of experts medical writers brainstorm with you, understand your requirements, analyze and coalesce your retirements with more innovative concepts to deliver your message more concisely and effectively. </p>
-                                    <p>Being at the forefront in providing world-class medical, scientific and healthcare communication services for global healthcare industry, we truly understands what it takes to be different to drive meaningful insights and analytics for better outcome and improvement of health. </p>
+                                    <?php echo $getAboutData['description']; ?>
                                 </div>
                             </div>
                             
