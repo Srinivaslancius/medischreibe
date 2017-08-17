@@ -9,7 +9,7 @@
                         <div class="card">
                             <div class="card-content">
                                  <a href="add_careers.php" style="float:right">Add Careers</a>
-                                <span class="card-title">Service Pages</span>
+                                <span class="card-title">Careers Pages</span>
                                 <?php $getData = getAllDataWithActiveRecent('careers'); $i=1; ?>
                                 <table id="example" class="display responsive-table datatable-example">
                                     <thead>
