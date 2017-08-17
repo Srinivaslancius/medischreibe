@@ -9,7 +9,7 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Medischreibe</title>
+        <title><?php echo $getSiteSettingsData['admin_title']; ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 

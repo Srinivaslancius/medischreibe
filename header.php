@@ -5,7 +5,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                                     <div class="header-top-left">
                                         <ul>
-                                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:+919999999999"> +91-999-999-9999 </a></li>
+                                            <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $getSiteSettingsData['mobile']; ?>"><?php echo $getSiteSettingsData['mobile']; ?> </a></li>
                                             <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">info@medisripe.com</a></li>
                                         </ul>
                                     </div>
