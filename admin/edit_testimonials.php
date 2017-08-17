@@ -75,13 +75,13 @@ $id = $_GET['uid'];
                                 <div class="form-group">
                                     <label for="name" class="col-lg-3 col-sm-3 control-label"></label>
                                     <div class="col-lg-9">
-                                        <img src="<?php echo $base_url . 'uploads/testimonials_images/'.$getBanners1['image'] ?>" height="200" width="200" id="output" />
+                                        <img src="<?php echo $base_url . 'uploads/testimonials_images/'.$getBanners1['image'] ?>" height="70" width="70" id="output" />
                                     </div>
                                 </div> 
                                 
                                 <div class="input-field col s6">
                                    Banner : <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" onchange="loadFile(event)">
-                                   <p>(Please upload this size images 1920*800)</p>
+                                   <p>(Please upload this size images 70*70)</p>
                                 </div>
 
                                 <div class="input-field col s12">
