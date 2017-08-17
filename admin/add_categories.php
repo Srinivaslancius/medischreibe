@@ -21,7 +21,7 @@
 <main class="mn-inner">
     <div class="row">
         <div class="col s12">
-            <div class="page-title">Categoreis</div>
+            <div class="page-title">Department</div>
         </div>
         <div class="col s12 m12 l2"></div>
         <div class="col s12 m12 l8">
@@ -33,7 +33,7 @@
 
                                 <div class="input-field col s12">
                                     <input id="title" autofocus="autofocus" type="text" class="validate" name="category_name" required>
-                                    <label for="title">Category Name</label>
+                                    <label for="title">Department Name</label>
                                 </div>
                                 
                                 <div class="input-field col s12">
