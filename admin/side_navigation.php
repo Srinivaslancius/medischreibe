@@ -41,7 +41,7 @@
                     </li>
                     <li class="no-padding <?php if($page_name == 'banners.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="banners.php"><i class="material-icons">collections</i>Banners</a></li>
 
-                   <li class="no-padding <?php if($page_name == 'banners.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="services.php"><i class="material-icons">collections</i>Services</a></li>
+                   <li class="no-padding <?php if($page_name == 'services.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="services.php"><i class="material-icons">collections</i>Services</a></li>
 
                     <li class="no-padding <?php if($page_name == 'categories.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="categories.php"><i class="material-icons">settings_input_svideo</i>Categories</a></li>
 
