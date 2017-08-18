@@ -63,9 +63,9 @@
                                 <img src="img/banner/2.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-heartbeat" aria-hidden="true"></i>
-                                    <h3><a href="#"><?php echo $getCreativity['title']?></a></h3>
+                                    <h3><a href=""><?php echo $getCreativity['title']?></a></h3>
                                     <p><?php echo substr($getCreativity['description'],0,150)?></p>
-                                    <a href="#" class="btn-ghost btn-posiition">Read More</a>
+                                    <a href="content_details.php?uid=<?php echo $getCreativity['id']?>" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -75,9 +75,9 @@
                                 <img src="img/banner/3.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                    <h3><a href="#"><?php echo $getMotivation['title']?></a></h3>
-                                    <p><?php echo substr($getMotivation['description'],0,150)?></p>
-                                    <a href="#" class="btn-ghost btn-posiition">Read More</a>
+                                    <h3><a href=""><?php echo $getMotivation['title']?></a></h3>
+                                    <p><?php echo substr($getMotivation['description'],0,50)?></p>
+                                    <a href="content_details.php?uid=<?php echo $getMotivation['id']?>" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +87,9 @@
                                 <img src="img/banner/4.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    <h3><a href="#"><?php echo $getTranscendingSuccess['title']?></a></h3>
-                                    <p><?php echo substr($getTranscendingSuccess['description'],0,150)?></p>
-                                    <a href="#" class="btn-ghost btn-posiition">Read More</a>
+                                    <h3><a href=""><?php echo $getTranscendingSuccess['title']?></a></h3>
+                                    <p><?php echo substr($getTranscendingSuccess['description'],0,50)?></p>
+                                    <a href="content_details.php?uid=<?php echo $getTranscendingSuccess['id']?>" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
                         </div>
