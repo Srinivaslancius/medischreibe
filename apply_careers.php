@@ -1,41 +1,29 @@
 <?php include_once "main_header.php"; ?>
 
             <!-- Inner Page Banner Area Start Here -->
-    <?php error_reporting(1); if (!isset($_POST['submit']))  {
+    <?php if (!isset($_POST['submit']))  {        
         echo "";
         } else  {
-            $name = $_POST['customer_name'];
-            $email = $_POST['customer_email'];
-            $mob = $_POST['customer_mobile'];
-            $file = $_FILES["fileToUpload"]["name"];
-            $status = $_POST['status'];
-            $target_dir = "../uploads/resumes/";
-            if($file!='') {
-            $ext_str = 'doc,docx';
-            $allowed_extensions = explode(',', $ext_str);
-            $max_file_size = 10485760;   //10 mb remember 1024bytes =1kbytes /* check allowed extensions here */
-            $ext = substr($file['name'], strrpos($file['name'] ,'.') +1);  //get file extension from last sub string from last . character
-                if(!in_array($ext, $allowed_extensions)) {
-                echo "only".$ext_str." files allowed to upload"; // exit the script by warning
-                }
-                $target_dir = "../uploads/resumes/";
-                $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-                $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
+                //echo "<pre>"; print_r($_POST); die;
+                $name = $_POST['customer_name'];
+                $email = $_POST['customer_email'];
+                $mob = $_POST['customer_mobile'];
+                $file = $_FILES["fileToUpload"]["name"];
+                
+                $target_dir = "uploads/resumes/";
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "INSERT INTO apply_jobs (`customer_name`,`customer_email`, `customer_mobile`,`resume`, `status`) VALUES ('$name', '$email','$mob','$file','$status')";
+                    $sql = "INSERT INTO apply_jobs (`customer_name`,`customer_email`, `customer_mobile`,`resume`) VALUES ('$name', '$email','$mob','$file')";
                     if($conn->query($sql) === TRUE){
-                       echo "<script>alert('Data Updated Successfully');window.location.href='apply_careers.php';</script>";
+                       echo "<script>alert('Your Job Applied Successfully');window.location.href='apply_careers.php';</script>";
                     } else {
-                       echo "<script>alert('Data Updation Failed');window.location.href='apply_careers.php';</script>";
+                       echo "<script>alert('Your Job Updation Failed');window.location.href='apply_careers.php';</script>";
                     }
                     //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
                 } else {
                     echo "Sorry, there was an error uploading your file.";
                 }
             }            
-            
-        }
+        
 ?>
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
                 <div class="container">
@@ -58,7 +46,7 @@
                         <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
                             <div class="contact-form-area">
                                 <h2 class="title-table">Apply Here</h2>
-                                <form id="contact-form"> 
+                                <form  method="post" enctype="multipart/form-data"> 
                                     <fieldset>     
                                         <div class="row contact-form-inner">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -81,15 +69,12 @@
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                <div class="form-group">
-                                                    <input type="file" placeholder="file*" class="form-control" name="fileToUpload" id="form-file" data-error=" File field is required"  required>
+                                                    <input type="file" placeholder="file*" class="form-control" accept=".doc, .docx" name="fileToUpload" id="form-file" data-error=" File field is required"  required>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
-
-
-                                            
-                                            <button type="submit" name="submit"class="book-now-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                            <div class='form-response'></div>
+                                            <input type="submit" name="submit" value="submit" class="book-now-btn"></input>
+                                           
                                         </div>
                                     </fieldset>
                                 </form> 
