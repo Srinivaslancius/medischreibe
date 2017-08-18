@@ -1,29 +1,37 @@
 <?php include_once "main_header.php"; ?>
 
             <!-- Inner Page Banner Area Start Here -->
-    <?php if (!isset($_POST['submit']))  {        
-        echo "";
+<?php  if (!isset($_POST['submit']))  {
+            echo "";
         } else  {
-                //echo "<pre>"; print_r($_POST); die;
-                $name = $_POST['customer_name'];
-                $email = $_POST['customer_email'];
-                $mob = $_POST['customer_mobile'];
-                $file = $_FILES["fileToUpload"]["name"];
-                
+
+
+            $name = $_POST['customer_name'];
+            $email = $_POST['customer_email'];
+            $mob = $_POST['customer_mobile'];
+            $fileToUpload = $_FILES["fileToUpload"]["name"];
+            
+            
+            if($fileToUpload!='') {
+
                 $target_dir = "uploads/resumes/";
+                $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "INSERT INTO apply_jobs (`customer_name`,`customer_email`, `customer_mobile`,`resume`) VALUES ('$name', '$email','$mob','$file')";
+                    $sql = "INSERT INTO apply_jobs (`customer_name`,`customer_email`, `customer_mobile`, `resume`) VALUES ('$name', '$email','$mob','$fileToUpload')";
                     if($conn->query($sql) === TRUE){
-                       echo "<script>alert('Your Job Applied Successfully');window.location.href='apply_careers.php';</script>";
+                       echo "<script>alert('Data Updated Successfully');window.location.href='apply_careers.php';</script>";
                     } else {
-                       echo "<script>alert('Your Job Updation Failed');window.location.href='apply_careers.php';</script>";
+                       echo "<script>alert('Data Updation Failed');window.location.href='apply_careers.php';</script>";
                     }
                     //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
                 } else {
                     echo "Sorry, there was an error uploading your file.";
                 }
             }            
-        
+            
+        }
 ?>
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
                 <div class="container">
@@ -32,7 +40,7 @@
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Page</a></li>
-                            <li>contact</li>
+                            <li>Apply Here</li>
                         </ul>
                     </div>
                 </div>  
