@@ -1,4 +1,6 @@
-<?php include_once "main_header.php"; ?>       
+<?php include_once "main_header.php"; ?>
+<?php $getAllActiveTestmonials = getAllDataCheckActive('testimonials',0); ?>
+<?php $getAllActiveTestmonials1 = getAllDataCheckActive('testimonials',0); ?>
 
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
@@ -474,58 +476,30 @@
                 </div> 
                 <div class="container">
                     <div class="row tab-content">
-                        <div class="patients-tab-content-details tab-pane fade" id="Nuclear">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If  but the majority have suffered alteration you are going to use a passage.</p>
+
+                        <?php $i = 0; while($getTestominalsData1 = $getAllActiveTestmonials1->fetch_assoc()) { ?>
+                        <div class="patients-tab-content-details tab-pane fade <?php if($i==2) { ?> active in <?php } ?>" id="<?php echo $getTestominalsData1['id']; ?>">
+                            <?php echo $getTestominalsData1['description']; ?>
                         </div> 
-                        <div class="patients-tab-content-details tab-pane fade" id="Dental">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If  but the majority have suffered alteration you are going to use a passage.</p>
-                        </div>
-                        <div class="patients-tab-content-details tab-pane fade active in" id="Traumatology">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If  but the majority have suffered alteration you are going to use a passage.</p>
-                        </div>
-                        <div class="patients-tab-content-details tab-pane fade" id="Cardiology">
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If  but the majority have suffered alteration you are going to use a passage.</p>
-                        </div>
+                        <?php $i++; } ?>
+                       
                     </div> 
                 </div> 
                 <div class="container">
                     <ul class="patients-tab-title">
-                        <li>
-                            <a href="#Nuclear" data-toggle="tab" aria-expanded="false">
+
+                        <?php $i = 0; while($getTestominalsData = $getAllActiveTestmonials->fetch_assoc()) { ?>
+                        <li <?php if($i==2) { ?> class ="active" <?php } ?>>
+                            <a href="#<?php echo $getTestominalsData['id']; ?>" data-toggle="tab" aria-expanded="false">
                                 <img src="img/team/1.png" class="img-responsive" alt="team">
                                 <div class="patients-tab-title-inner">
-                                    <h3>Hasan Al Mamun</h3>
-                                    <p>Dental patient</p>
+                                    <h3><?php echo $getTestominalsData['title']; ?></h3>
+                                    <p><?php echo $getTestominalsData['role']; ?></p>
                                 </div> 
                             </a>
                         </li>
-                        <li>
-                            <a href="#Dental" data-toggle="tab" aria-expanded="false">
-                                <img src="img/team/2.png" class="img-responsive" alt="team">
-                                <div class="patients-tab-title-inner">
-                                    <h3>Hasan Al Mamun</h3>
-                                    <p>Dental patient</p>
-                                </div> 
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="#Traumatology" data-toggle="tab" aria-expanded="false">
-                               <img src="img/team/3.png" class="img-responsive" alt="team">
-                                <div class="patients-tab-title-inner">
-                                    <h3>Hasan Al Mamun</h3>
-                                    <p>Dental patient</p>
-                                </div> 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Cardiology" data-toggle="tab" aria-expanded="false">
-                                <img src="img/team/4.png" class="img-responsive" alt="team">
-                                <div class="patients-tab-title-inner">
-                                    <h3>Hasan Al Mamun</h3>
-                                    <p>Dental patient</p>
-                                </div> 
-                            </a>
-                        </li>
+                        <?php $i++; } ?>
+
                     </ul>
                 </div>
             </div>
