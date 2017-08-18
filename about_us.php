@@ -1,5 +1,5 @@
 <?php include_once "main_header.php"; ?>
-<?php $getAboutData = getIndividualDetails('1',"content_pages","id");  ?>
+<?php $getAboutData = getIndividualDetails('4',"content_pages","id");  ?>
            
             <!-- Inner Page Banner Area Start Here -->
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
