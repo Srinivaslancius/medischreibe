@@ -45,7 +45,7 @@
                                         <div class="panel-body details-item-body">
                                             <?php echo $getAllData['description']; ?>
                                             
-                                            <p><a href="apply_careers.php"  target="_blank" class="btn-default-primary col-md-4">Apply now</a><span class="col-md-2"></span><a href="#" class="btn-default-primary col-md-5">Upload Resume</a></p>
+                                            <p><a href="apply_careers.php"  target="_blank" class="btn-default-primary col-md-4">Apply now</a><span class="col-md-2"></span><!-- <a href="#" class="btn-default-primary col-md-5">Upload Resume</a> --></p>
                                         </div>
                                         
                                     </div>
