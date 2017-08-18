@@ -1,26 +1,25 @@
 <?php include_once "main_header.php"; ?>
 <?php $getAllActiveTestmonials = getAllDataCheckActive('testimonials',0); ?>
 <?php $getAllActiveTestmonials1 = getAllDataCheckActive('testimonials',0); ?>
+<?php $getAllActiveBanners = getAllDataCheckActive('banners',0); ?>
 
 
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
                 <div class="bend niceties preview-1">
-                    <div id="ensign-nivoslider-3" class="slides">   
-                        <img src="img/slider/slide2-1.jpg" alt="slider" title="#slider-direction-1"/>
-                        <img src="img/slider/slide2-2.jpg" alt="slider" title="#slider-direction-2"/>
-                        <img src="img/slider/slide2-3.jpg" alt="slider" title="#slider-direction-3"/>
+                    
+                    <div id="ensign-nivoslider-3" class="slides">  
+                    <?php while($getBannerData = $getAllActiveBanners->fetch_assoc()) { ?> 
+                        <img src="uploads/banner_images/<?php echo $getBannerData['banner']; ?>" alt="img01"  title="#slider-direction-1"/>
+                    <?php } ?>
                     </div>
+                   
                     <div id="slider-direction-1" class="t-cn slider-direction">
                         <div class="slider-content s-tb slide-1">
                             <div class="title-container s-tb-c">
                                 <span>Welcome to</span>
                                 <h1 class="title1">Medischreibe.</h1>
                                 <p class="slider-para1">Delivering credible, ethical, world-class pharma and healthcare communications.</p>
-                                <div class="slider-btn-area">
-                                    <a href="#">Explore Now<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                                             
-                                </div>
                             </div>
                         </div>
                     </div>
