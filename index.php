@@ -2,6 +2,7 @@
 <?php $getAllActiveTestmonials = getAllDataCheckActive('testimonials',0); ?>
 <?php $getAllActiveTestmonials1 = getAllDataCheckActive('testimonials',0); ?>
 
+
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
                 <div class="bend niceties preview-1">
@@ -56,35 +57,38 @@
             <div class="banner2-area">
                 <div class="container">
                     <div class="row banner2-possition">
+                        <?php $getCreativity = getIndividualDetails('3',"content_pages","id");  ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="banner2-box-wrapper">
                                 <img src="img/banner/2.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-heartbeat" aria-hidden="true"></i>
-                                    <h3><a href="#">Creativity</a></h3>
-                                    <p>Creating innovative solutions, perfectly assessed, analyzed, tailored to exact communication needs of our clients.</p>
+                                    <h3><a href="#"><?php echo $getCreativity['title']?></a></h3>
+                                    <p><?php echo substr($getCreativity['description'],0,150)?></p>
                                     <a href="#" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
                         </div>
+                        <?php $getMotivation = getIndividualDetails('2',"content_pages","id");  ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="banner2-box-wrapper">
                                 <img src="img/banner/3.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                    <h3><a href="#">Motivation</a></h3>
-                                    <p>Making communication more motivating instilling our expert industry insights so that our clients can go on to inspire audience to take action. </p>
+                                    <h3><a href="#"><?php echo $getMotivation['title']?></a></h3>
+                                    <p><?php echo substr($getMotivation['description'],0,150)?></p>
                                     <a href="#" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
                         </div>
+                        <?php $getTranscendingSuccess = getIndividualDetails('1',"content_pages","id");  ?>
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="banner2-box-wrapper">
                                 <img src="img/banner/4.jpg" class="img-responsive" alt="banner">
                                 <div class="banner2-box-content">
                                     <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    <h3><a href="#">Transcending Success </a></h3>
-                                    <p>Our multi-channel delivery model will surely help transform your scientific communication into a more successful message.</p>
+                                    <h3><a href="#"><?php echo $getTranscendingSuccess['title']?></a></h3>
+                                    <p><?php echo substr($getTranscendingSuccess['description'],0,150)?></p>
                                     <a href="#" class="btn-ghost btn-posiition">Read More</a>
                                 </div>
                             </div>
@@ -491,7 +495,7 @@
                         <?php $i = 0; while($getTestominalsData = $getAllActiveTestmonials->fetch_assoc()) { ?>
                         <li <?php if($i==2) { ?> class ="active" <?php } ?>>
                             <a href="#<?php echo $getTestominalsData['id']; ?>" data-toggle="tab" aria-expanded="false">
-                                <img src="img/team/1.png" class="img-responsive" alt="team">
+                                <img src="uploads/testimonials_images/<?php echo $getTestominalsData['image']; ?>" class="img-responsive" alt="team">
                                 <div class="patients-tab-title-inner">
                                     <h3><?php echo $getTestominalsData['title']; ?></h3>
                                     <p><?php echo $getTestominalsData['role']; ?></p>
