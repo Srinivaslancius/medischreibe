@@ -1,4 +1,5 @@
 <?php include_once "main_header.php"; ?>
+<?php $getAllActiveCareers = getAllDataCheckActive('careers',0); ?>
             <!-- Inner Page Banner Area Start Here -->
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
                 <div class="container">
@@ -32,38 +33,25 @@
                         </div>
                         <div class="why-choose-content">
                             <div class="panel-group" id="accordion">
-                                
+
+                                <?php $i=1; while($getAllData=$getAllActiveCareers->fetch_assoc()) { ?>
                                 <div class="panel panel-default details-item-wrapper">
                                     <div class="panel-heading details-item-title">
                                         <div class="panel-title">
-                                            <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">01. Job Title will comes here</a>
+                                            <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#<?php echo $getAllData['id']?>"><?php echo $i?>. <?php echo $getAllData['title']; ?></a>
                                         </div>
                                     </div>
-                                    <div aria-expanded="false" id="collapseOne" role="tabpanel" class="panel-collapse collapse">
+                                    <div aria-expanded="false" id="<?php echo $getAllData['id']?>" role="tabpanel" class="panel-collapse collapse">
                                         <div class="panel-body details-item-body">
-                                            <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat.</p> 
+                                            <?php echo $getAllData['description']; ?>
                                             
                                             <p><a href="#" class="btn-default-primary col-md-4">Apply now</a><span class="col-md-2"></span><a href="#" class="btn-default-primary col-md-5">Upload Resume</a></p>
                                         </div>
                                         
                                     </div>
                                 </div>
+                                <?php $i++; } ?>
                                 
-                                <div class="panel panel-default details-item-wrapper">
-                                    <div class="panel-heading details-item-title">
-                                        <div class="panel-title">
-                                            <a aria-expanded="false" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsetwo">01. Job Title will comes here</a>
-                                        </div>
-                                    </div>
-                                    <div aria-expanded="false" id="collapsetwo" role="tabpanel" class="panel-collapse collapse">
-                                        <div class="panel-body details-item-body">
-                                            <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat.</p> 
-                                            
-                                            <p><a href="#" class="btn-default-primary col-md-4">Apply now</a><span class="col-md-2"></span><a href="#" class="btn-default-primary col-md-5">Upload Resume</a></p>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
                             </div>
                         </div>                        
                     </div>
