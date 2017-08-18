@@ -57,6 +57,8 @@
 
                     <li class="no-padding <?php if($page_name == 'key_practices.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="key_practices.php"><i class="material-icons">collections</i>Key Practices</a></li>
 
+                    <li class="no-padding <?php if($page_name == 'applied_jobs.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="applied_jobs.php"><i class="material-icons">collections</i>Applied Jobs</a></li>
+
                 </ul>
                 
                 <div class="footer">
