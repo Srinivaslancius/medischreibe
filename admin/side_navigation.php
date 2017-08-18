@@ -46,6 +46,8 @@
                     <li class="no-padding <?php if($page_name == 'categories.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="categories.php"><i class="material-icons">settings_input_svideo</i>Department</a></li>
 
                     <li class="no-padding <?php if($page_name == 'testimonials.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="testimonials.php"><i class="material-icons">settings_input_svideo</i>Testimonials</a></li>
+
+                    <li class="no-padding <?php if($page_name == 'news_letters.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="news_letters.php"><i class="material-icons">settings_input_svideo</i>News Letters</a></li>
                     
                     <li class="no-padding <?php if($page_name == 'content_pages.php') { echo "active"; } ?>"><a class="waves-effect waves-grey" href="content_pages.php"><i class="material-icons">content_copy</i>Content Pages</a></li>
 
