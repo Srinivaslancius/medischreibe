@@ -2,7 +2,6 @@
 include_once('includes/config.php');
 include_once('includes/functions.php');
 $id = $_GET['bid'];
-//echo $music_number;
 $target_dir = '../uploads/keypractice_images/';
 $getImgUnlink = getImageUnlink('image','key_practices','id',$id,$target_dir);
 $qry = "DELETE FROM key_practices WHERE id ='$id'";
