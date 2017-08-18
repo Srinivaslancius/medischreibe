@@ -2,6 +2,10 @@
            
             <?php include_once 'side_navigation.php';?>
 
+            <?php 
+            
+            ?>
+
             <main class="mn-inner">
                 <div class="row">
                    
