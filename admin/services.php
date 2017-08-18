@@ -10,7 +10,7 @@
                             <div class="card-content">
                                  <a href="add_services.php" style="float:right">Add Services</a>
                                 <span class="card-title">Service Pages</span>
-                                <?php $getData = getAllDataWithActiveRecent('key_practices'); $i=1; ?>
+                                <?php $getData = getAllDataWithActiveRecent('services'); $i=1; ?>
                                 <table id="example" class="display responsive-table datatable-example">
                                     <thead>
                                         <tr>
@@ -28,7 +28,7 @@
                                             <td><?php echo $i;?></td>
                                             <td><?php echo $row['title'];?></td>
                                             <td><?php echo substr(strip_tags($row['description']), 0,150);?></td>
-                                            <td><img src="<?php echo $base_url . 'uploads/services_images/'.$row['image'] ?>" height="100" width="100"/></td> 
+                                            <td><img src="<?php echo $base_url . 'uploads/services_images/'.$row['image'] ?>" height="70" width="70"/></td> 
                                             <td><?php if ($row['status']==0) { echo "Active" ;} else{ echo "In Active" ;}?></td>
                                             <td><a href=" edit_services.php?uid=<?php echo $row['id'];?>"><i class="material-icons dp48">edit</i></a><a class="click_view" data-modalId="<?php echo $row['id']?>" href="#"><i class="material-icons dp48">visibility</i></a>
                                             <div id="myModal_<?php echo $row['id']; ?>" class="modal fade" >
