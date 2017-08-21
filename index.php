@@ -111,85 +111,32 @@
                     <div class="row">                       
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <ul class="service-title-wrapper-left">
-                                <li>
+                                <?php $i=1;  $max=4; while($getAllData=$getAllActiveServices->fetch_assoc() and ($i < $max) ) { ?>
+                                <li>                                    
                                     <div class="service-content">
-                                        <h3><a href="#Gynecological" data-toggle="tab" aria-expanded="false">Cardiology</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                        <h3><a href="#<?php echo $getAllData['id']; ?>" data-toggle="tab" aria-expanded="false"><?php echo $getAllData['title']; ?></a></h3>
+                                        <p><?php echo $getAllData['description']; ?></p>
                                     </div> 
                                     <div class="service-icon">
                                         <i class="fa fa-heartbeat" aria-hidden="true"></i>
-                                    </div>
+                                    </div>                                  
                                 </li>
-                                <li class="active">
-                                    <div class="service-content">
-                                        <h3><a href="#Checkup" data-toggle="tab" aria-expanded="false">Oncology</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                    <div class="service-icon">
-                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service-content">
-                                        <h3><a href="#Surgery" data-toggle="tab" aria-expanded="false">Surgery</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                    <div class="service-icon">
-                                        <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    </div>
-                                </li>
+                                <?php $i++; } ?>
+                                
                             </ul>
                         </div> 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="tab-content servise-details-wrapper">
-                                <div class="tab-pane fade" id="Gynecological">
+                                <?php $i=1;  while($getAllData1=$getAllActiveServices1->fetch_assoc() ) { ?>
+                                <div class="tab-pane fade <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData1['id']; ?>">
                                     <img src="img/service/1.jpg" class="img-responsive" alt="service">
                                     <div class="service-details-content">
-                                        <h3>Cardiology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <h3><?php echo $getAllData1['title']; ?></h3>
+                                        <p><?php echo $getAllData1['description']; ?></p>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </div> 
                                 </div> 
-                                <div class="tab-pane fade active in" id="Checkup">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Oncology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div> 
-                                <div class="tab-pane fade" id="Surgery">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Surgery </h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="General2">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>CNS</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="Ambulance">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Pulmonary</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="Diseases">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Hematology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
+                                <?php $i++; } ?>                              
                             </div> 
                         </div> 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
