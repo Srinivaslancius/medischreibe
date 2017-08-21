@@ -292,7 +292,7 @@
                 </div>  
             </div> 
             <!-- Department 2 Area End Here -->             
-          
+        </div>  
         <?php include_once 'main_footer.php';?>
 
         <script type="text/javascript">

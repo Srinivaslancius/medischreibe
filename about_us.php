@@ -61,7 +61,7 @@
                                 <?php $i++; } ?>                                
                             </ul>
                         </div> 
-                        <div class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                             <div class="tab-content our-history-content"> 
                                 <?php $i=1; while($getAllData1=$getAllActiveKeyPractices1->fetch_assoc()) { ?>
                                 <div class="our-history-item tab-pane fade <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData1['id']; ?>">
@@ -77,65 +77,6 @@
                 </div> 
             </div>
             <!-- Our History Area End Here -->
-            <!-- Video Area Start Here -->
-            <div class="video-area">
-                <div class="video-img-holder-left" style="background-image: url('img/banner/6.jpg');"></div>                    
-                <div class="video-img-holder-right" style="background-image: url('img/banner/7.jpg');"></div> 
-                <div class="container">
-                    <!-- <div class="row video-inner">
-                        
-                        <div class="video-title-wrapper">
-                            <ul>
-                                <h3 style="color: #fff;">Scientific communications</h3>
-                                <p style="color: #fff;">We are  passionate about making scientific communications more simplified, communicating science in a much more impressive way across multiple channels.</p>
-                                <li class="active">
-                                    <a href="#General" data-toggle="tab" aria-expanded="false">
-                                        <div class="video-icon">
-                                            <i class="fa fa-stethoscope" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="video-content">
-                                            <h3>Creativity</h3>
-                                            <p>Creating innovative solutions, perfectly assessed, analyzed, tailored to exact communication needs of our clients.</p>
-                                        </div> 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#Infusion" data-toggle="tab" aria-expanded="false">
-                                        <div class="video-icon">
-                                            <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="video-content">
-                                            <h3>Motivation</h3>
-                                            <p>Making communication more motivating instilling our expert industry insights so that our clients can go on to inspire audience to take action. </p>
-                                        </div>
-                                    </a> 
-                                </li>
-                                <li>
-                                    <a href="#Hospire" data-toggle="tab" aria-expanded="false">
-                                        <div class="video-icon">
-                                            <i class="fa fa-user-md" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="video-content">
-                                            <h3>Transcending Success</h3>
-                                            <p>Our multi-channel delivery model will surely help transform your scientific communication into a more successful message. </p>
-                                        </div> 
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="video-play-btn">
-                            <ul>
-                                <li>watch</li>
-                                <li>
-                                    <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM"><i class="fa fa-play" aria-hidden="true"></i></a>
-                                </li>
-                                <li>video</li>
-                            </ul>
-                        </div>
-                    </div> -->
-                </div> 
-            </div> 
-            <!--  Video Area End Here -->
           
             
         <?php include_once 'main_footer.php';?>
