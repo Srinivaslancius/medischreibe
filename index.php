@@ -311,14 +311,13 @@
             </div>
             <!-- Patients Area End Here -->
             <!-- Department 2 Area Start Here -->
-            <div class="department2-area">
+             <div class="department2-area">
                 <div class="container">
                     <div class="title-area">
                         <span class="sub-title">Treat With<span> Medischreibe</span></span>
                         <h2 class="title title-bar">Medischreibe departments</h2>
                     </div> 
                 </div>  
-
                 <div class="container">
                     <ul class="department-tab-title">
                         <?php $i=1; while($getAllData=$getAllActiveServices->fetch_assoc()) { ?>
@@ -328,91 +327,22 @@
                                 <p><?php echo $getAllData['title']; ?></p>
                             </a>
                         </li>
-                        <?php $i++; } ?>
-                        
+                        <?php $i++; } ?>                        
                     </ul>
                 </div>  
                 <div class="container tab-content">
-                    
-                    <div class="row tab-content-details tab-pane fade active in" id="Nuclear2">
+                    <?php $i=1; while($getAllData1=$getAllActiveServices1->fetch_assoc()) { ?>
+                    <div class="row tab-content-details tab-pane fade <?php if($i==1) { ?>  active in <?php } ?>"  id="<?php echo $getAllData1['id']; ?>">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
+                            <img src="uploads/services_images/<?php echo $getAllData1['image']; ?>" alt="department" class="img-responsive">                            
                         </div>
-                        <?php $i=1; while($getAllData1=$getAllActiveServices1->fetch_assoc()) { ?>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData1['id']; ?>" >
-                            <h3><?php echo $getAllData1['title']; ?></</h3>
-                            <p><span><?php echo $getAllData1['description']; ?></span></p>
-                            
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div> 
-                        <?php $i++; } ?> 
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <h3><?php echo $getAllData1['title']; ?></h3>
+                            <?php echo $getAllData1['description']; ?>
+                            <a href="service_details.php" class="btn-hover-ghost-accent">visit service</a>
+                        </div>  
                     </div> 
-                    <!-- <div class="row tab-content-details tab-pane fade" id="Dental2">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Oncology</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
-                   <!--  <div class="row tab-content-details tab-pane fade" id="Traumatology2">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Surgery</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
-                    <!-- <div class="row tab-content-details tab-pane fade" id="Cardiology2">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>CNS</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
-                    <!-- <div class="row tab-content-details tab-pane fade" id="pulmonary">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Pulmonary</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
-                    <!-- <div class="row tab-content-details tab-pane fade" id="hematology">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Hematology </h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
-                    <!-- <div class="row tab-content-details tab-pane fade" id="infectious">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="img/department/2.jpg" alt="department" class="img-responsive">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Infectious diseases</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
-                            <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
-                    </div> -->
+                    <?php $i++; } ?>                 
                 </div>  
             </div> 
             <!-- Department 2 Area End Here -->             
