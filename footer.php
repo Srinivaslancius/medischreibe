@@ -5,7 +5,8 @@
                                 <div class="footer-box">
                                     <img src="img/footer-logo.png" class="footer-logo img-responsive" alt="logo">
                                     <div class="footer-about">
-                                        <p>All of our team members come from diverse cultural and business back grounds and have worked among many businesses.</p>
+                                        <p><?php echo substr($getAboutData['description'],0,150); ?></p>
+                                        
                                     </div>
                                     <ul class="corporate-address">
                                         <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $getSiteSettingsData['mobile']; ?>"><?php echo $getSiteSettingsData['mobile']; ?> </a></li>
@@ -59,6 +60,6 @@
                 </div>
                 <div class="footer-area-bottom">
                     <div class="container">
-                        <p>&copy; 2017 medischreibe. All rights reserved. Design & Develop by<a target="_blank" href="#"> Lancius Solutions</a></p>
+                        <p>&copy; 2017 medischreibe. All rights reserved. Design & Develop by<a target="_blank" href="https://www.lanciussolutions.com/"> Lancius Solutions</a></p>
                     </div>
                 </div>
