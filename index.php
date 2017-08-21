@@ -4,6 +4,8 @@
 <?php $getAllActiveBanners = getAllDataCheckActive('banners',0); ?>
 <?php $getAllActiveServices = getAllDataCheckActive('services',0); ?>  
 <?php $getAllActiveServices1 = getAllDataCheckActive('services',0); ?> 
+<?php $getAllActiveServices2 = getAllDataCheckActive('services',0); ?> 
+<?php $getAllActiveServices3 = getAllDataCheckActive('services',0); ?> 
 
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
@@ -111,11 +113,11 @@
                     <div class="row">                       
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <ul class="service-title-wrapper-left">
-                                <?php $i=1;  $max=4; while($getAllData=$getAllActiveServices->fetch_assoc() and ($i < $max) ) { ?>
+                                <?php $i=1;  $max=4; while($getAllData2=$getAllActiveServices2->fetch_assoc() and ($i < $max) ) { ?>
                                 <li>                                    
                                     <div class="service-content">
-                                        <h3><a href="#<?php echo $getAllData['id']; ?>" data-toggle="tab" aria-expanded="false"><?php echo $getAllData['title']; ?></a></h3>
-                                        <p><?php echo $getAllData['description']; ?></p>
+                                        <h3><a href="#<?php echo $getAllData2['id']; ?>" data-toggle="tab" aria-expanded="false"><?php echo $getAllData2['title']; ?></a></h3>
+                                        <p><?php echo $getAllData2['description']; ?></p>
                                     </div> 
                                     <div class="service-icon">
                                         <i class="fa fa-heartbeat" aria-hidden="true"></i>
@@ -127,12 +129,12 @@
                         </div> 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="tab-content servise-details-wrapper">
-                                <?php $i=1;  while($getAllData1=$getAllActiveServices1->fetch_assoc() ) { ?>
-                                <div class="tab-pane fade <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData1['id']; ?>">
+                                <?php $i=1;  while($getAllData3=$getAllActiveServices3->fetch_assoc() ) { ?>
+                                <div class="tab-pane fade <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData3['id']; ?>">
                                     <img src="img/service/1.jpg" class="img-responsive" alt="service">
                                     <div class="service-details-content">
-                                        <h3><?php echo $getAllData1['title']; ?></h3>
-                                        <p><?php echo $getAllData1['description']; ?></p>
+                                        <h3><?php echo $getAllData3['title']; ?></h3>
+                                        <p><?php echo $getAllData3['description']; ?></p>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </div> 
                                 </div> 
