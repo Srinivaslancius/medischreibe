@@ -28,7 +28,12 @@
                                             <td><?php echo $row['customer_name'];?></td>
                                             <td><?php echo $row['customer_email'];?></td>
                                             <td><?php echo $row['customer_mobile'];?></td>
-                                            <td><a href="'img/200word.png' " title="<?php echo $row['resume'];?>"></a></td>
+                                            <td><a href="<?php echo $base_url . 'uploads/resumes/'.$row['resume'] ?>"><img src="C:\xampp\htdocs\medischreibe\img"></a></td>
+                                            
+                                            
+                                            
+                                        
+
                                         </tr>               
                                         <?php $i++; } ?>
                                     </tbody>

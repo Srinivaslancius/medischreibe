@@ -2,7 +2,7 @@
 <?php $getAboutData = getIndividualDetails('4',"content_pages","id");  ?>
 <?php $getAllActiveKeyPractices = getAllDataCheckActive('key_practices',0); ?>    
 <?php $getAllActiveKeyPractices1 = getAllDataCheckActive('key_practices',0); ?>   
-<?php $getAllActiveKeyPractices2 = getAllDataCheckActive('key_practices',0); ?>  
+ 
            
             <!-- Inner Page Banner Area Start Here -->
             <div class="inner-page-banner-area" style="background-image: url('img/banner/5.jpg');">
@@ -55,7 +55,9 @@
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
                             <ul class="our-history-title">
                                 <?php $i=1; while($getAllData=$getAllActiveKeyPractices->fetch_assoc()) { ?>
-                                    <li class="<?php if($i==1) { ?> active <?php } ?>"><a href="#<?php echo $getAllData['id']?>" data-toggle="tab" aria-expanded="false"><?php echo $getAllData['year'];?></a></li>
+                                    <li class="<?php if($i==1) { ?> active <?php } ?>">
+                                        <a href="#<?php echo $getAllData['id']?>" data-toggle="tab" aria-expanded="false"><?php echo $getAllData['year'];?></a>
+                                    </li>
                                 <?php $i++; } ?>                                
                             </ul>
                         </div> 

@@ -2,7 +2,8 @@
 <?php $getAllActiveTestmonials = getAllDataCheckActive('testimonials',0); ?>
 <?php $getAllActiveTestmonials1 = getAllDataCheckActive('testimonials',0); ?>
 <?php $getAllActiveBanners = getAllDataCheckActive('banners',0); ?>
-
+<?php $getAllActiveServices = getAllDataCheckActive('services',0); ?>  
+<?php $getAllActiveServices1 = getAllDataCheckActive('services',0); ?> 
 
             <!-- Slider 1 Area Start Here -->               
             <div class="slider2-area slider-overlay">
@@ -515,65 +516,36 @@
                         <h2 class="title title-bar">Medischreibe departments</h2>
                     </div> 
                 </div>  
+
                 <div class="container">
                     <ul class="department-tab-title">
-                        <li class="active">
-                            <a href="#Nuclear2" data-toggle="tab" aria-expanded="false">
+                        <?php $i=1; while($getAllData=$getAllActiveServices->fetch_assoc()) { ?>
+                        <li class="<?php if($i==1) { ?> active <?php } ?>">
+                            <a href="#<?php echo $getAllData['id']?>" data-toggle="tab" aria-expanded="false">
                                 <i class="fa fa-heartbeat" aria-hidden="true"></i>
-                                <p>Cardiology</p>
+                                <p><?php echo $getAllData['title']; ?></p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#Dental2" data-toggle="tab" aria-expanded="false">
-                                <i class="fa fa-stethoscope" aria-hidden="true"></i>
-                                <p>Oncology</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Traumatology2" data-toggle="tab" aria-expanded="false">
-                               <i class="fa fa-wheelchair" aria-hidden="true"></i>
-                                <p>Surgery</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#Cardiology2" data-toggle="tab" aria-expanded="false">
-                                <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                <p>CNS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#pulmanory" data-toggle="tab" aria-expanded="false">
-                                <i class="fa fa-hospital-o" aria-hidden="true"></i>
-                                <p>Pulmonary</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#hematology" data-toggle="tab" aria-expanded="false">
-                                <i class="fa fa-hospital-o" aria-hidden="true"></i>
-                                <p>Hematology</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#infectious" data-toggle="tab" aria-expanded="false">
-                                <i class="fa fa-hospital-o" aria-hidden="true"></i>
-                                <p>Infectious Diseases</p>
-                            </a>
-                        </li>
+                        <?php $i++; } ?>
+                        
                     </ul>
                 </div>  
                 <div class="container tab-content">
+                    
                     <div class="row tab-content-details tab-pane fade active in" id="Nuclear2">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Cardiology</h3>
-                            <p><span>"We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world."</span></p>
-                            <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
+                        <?php $i=1; while($getAllData1=$getAllActiveServices1->fetch_assoc()) { ?>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 <?php if($i==1) { ?>  active in <?php } ?>" id="<?php echo $getAllData1['id']; ?>" >
+                            <h3><?php echo $getAllData1['title']; ?></</h3>
+                            <p><span><?php echo $getAllData1['description']; ?></span></p>
+                            
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
-                        </div>  
+                        </div> 
+                        <?php $i++; } ?> 
                     </div> 
-                    <div class="row tab-content-details tab-pane fade" id="Dental2">
+                    <!-- <div class="row tab-content-details tab-pane fade" id="Dental2">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -583,8 +555,8 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
-                    <div class="row tab-content-details tab-pane fade" id="Traumatology2">
+                    </div> -->
+                   <!--  <div class="row tab-content-details tab-pane fade" id="Traumatology2">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -594,8 +566,8 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
-                    <div class="row tab-content-details tab-pane fade" id="Cardiology2">
+                    </div> -->
+                    <!-- <div class="row tab-content-details tab-pane fade" id="Cardiology2">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -605,8 +577,8 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
-                    <div class="row tab-content-details tab-pane fade" id="pulmonary">
+                    </div> -->
+                    <!-- <div class="row tab-content-details tab-pane fade" id="pulmonary">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -616,8 +588,8 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
-                    <div class="row tab-content-details tab-pane fade" id="hematology">
+                    </div> -->
+                    <!-- <div class="row tab-content-details tab-pane fade" id="hematology">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -627,8 +599,8 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
-                    <div class="row tab-content-details tab-pane fade" id="infectious">
+                    </div> -->
+                    <!-- <div class="row tab-content-details tab-pane fade" id="infectious">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <img src="img/department/2.jpg" alt="department" class="img-responsive">
                         </div>
@@ -638,7 +610,7 @@
                             <p>We are an inventive organization . We've won a huge amount of grants and have been highlighted in the greater part of the digital world. Gave with high demon strable skill, we are equipped for offering amazing web improvement adminis trations and answers for our esteemed customers abroad with complete.</p>
                             <a href="#" class="btn-hover-ghost-accent">visit department</a>
                         </div>  
-                    </div>
+                    </div> -->
                 </div>  
             </div> 
             <!-- Department 2 Area End Here -->             
