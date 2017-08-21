@@ -1,3 +1,4 @@
+<?php $getMenus = getAllDataCheckActive('services',0); ?>
 <div class="header2-area">
                     <div class="header-top-area">
                         <div class="container">
@@ -38,12 +39,9 @@
                                                 <li><a href="about_us.php">About Us</a></li>
                                                 <li><a href="#">Services</a>
                                                     <ul>
-                                                        <li><a href="#">Service Type</a></li>
-                                                        <li><a href="#">Service Type</a></li>
-                                                        <li><a href="#">Service Type</a></li>
-                                                        <li><a href="#">Service Type</a></li>
-                                                        <li><a href="#">Service Type</a></li>
-                                                        <li><a href="#">Service Type</a></li>
+                                                    <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
+                                                        <li><a href="#"><?php echo $getAllMenus['title']; ?></a></li>
+                                                    <?php } ?>                                                        
                                                     </ul>
                                                 </li>
                                                 
