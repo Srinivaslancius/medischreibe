@@ -18,7 +18,7 @@
                                             <th>Title</th>
                                             <th>Year</th>
                                             <th>Description </th>
-                                            <th>Image</th>
+                                            
                                             <th>Status </th>
                                             <th>Actions  </th>
                                         </tr>
@@ -30,7 +30,7 @@
                                             <td><?php echo $row['title'];?></td>
                                             <td><?php echo $row['year'];?></td>
                                             <td><?php echo substr(strip_tags($row['description']), 0,150);?></td>
-                                            <td><img src="<?php echo $base_url . 'uploads/keypractice_images/'.$row['image'] ?>" height="70" width="70"/></td> 
+                                            
                                             <td><?php if ($row['status']==0) { echo "Active" ;} else{ echo "In Active" ;}?></td>
                                             <td><a href=" edit_keypractices.php?uid=<?php echo $row['id'];?>"><i class="material-icons dp48">edit</i></a><a href="delete_keypractices.php?bid=<?php echo $row['id']; ?>"><i class="material-icons dp48" onclick="return confirm('Are you sure you want to delete?')">delete</i></a>
                                             <div id="myModal_<?php echo $row['id']; ?>" class="modal fade" >
