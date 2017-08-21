@@ -82,7 +82,7 @@
                 <div class="video-img-holder-left" style="background-image: url('img/banner/6.jpg');"></div>                    
                 <div class="video-img-holder-right" style="background-image: url('img/banner/7.jpg');"></div> 
                 <div class="container">
-                    <div class="row video-inner">
+                    <!-- <div class="row video-inner">
                         
                         <div class="video-title-wrapper">
                             <ul>
@@ -132,7 +132,7 @@
                                 <li>video</li>
                             </ul>
                         </div>
-                    </div> 
+                    </div> -->
                 </div> 
             </div> 
             <!--  Video Area End Here -->
