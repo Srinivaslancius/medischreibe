@@ -103,15 +103,10 @@
             <!-- Best Treatment Area End Here -->
             <!-- Service 2 Area Start Here -->
             <div class="service2-area bg-lightPrimary">
-                <div class="container">
-                    <div class="title-area">
-                        <span class="sub-title2">How We<span> Work</span></span>
-                        <h2 class="title title-bar">Medischreibe Services</h2>
-                    </div> 
-                </div>
+               
                 <div class="container">
                     <div class="row">                       
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                       <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <ul class="service-title-wrapper-left">
                                 <?php $i=1;  $max=4; while($getAllData2=$getAllActiveServices2->fetch_assoc() and ($i < $max) ) { ?>
                                 <li>                                    
@@ -172,11 +167,9 @@
                                 </li>
                             </ul>
                         </div> 
-                    </div> 
-                </div> 
-            </div>
-            <!-- Service 2 Area Start Here --> 
-            <!-- Schedule 1 Area Start Here -->
+                    </div> -->
+
+                      <!-- Schedule 1 Area Start Here -->
             <div class="schedule-area">
                 <div class="container">
                     <div class="row table-wrapper2">
@@ -221,6 +214,10 @@
                 
             </div>  
             <!-- Schedule 1 Area End Here -->
+                </div> 
+            </div>
+            <!-- Service 2 Area Start Here --> 
+          
             <!-- Patients Area Start Here -->
             <div class="patients-area bg-primaryText">
                 <div class="container">
