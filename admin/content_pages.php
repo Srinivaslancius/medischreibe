@@ -8,7 +8,7 @@
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                 <!-- <a href="add_content_pages.php" style="float:right">Add Contents</a> -->
+                                  <!-- <a href="add_content_pages.php" style="float:right">Add Contents</a> --> 
                                 <span class="card-title">Content Pages</span>
                                 <?php $getData = getAllDataWithActiveRecent('content_pages'); $i=1; ?>
                                 <table id="example" class="display responsive-table datatable-example">
@@ -16,9 +16,12 @@
                                         <tr>
                                             <th>Id</th>
                                             <th>Title</th>
-                                            <th>Description </th>
+                                            <th>Description</th>
+                                            <th>Meta title</th>
+                                            <th>meta keywords</th>
+                                            <th>meta description</th>
                                             <th>Status </th>
-                                            <th>Actions  </th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>                                    
                                     <tbody>
@@ -27,6 +30,9 @@
                                             <td><?php echo $i;?></td>
                                             <td><?php echo $row['title'];?></td>
                                             <td><?php echo substr(strip_tags($row['description']), 0,150);?></td>
+                                            <td><?php echo $row['meta_title'];?></td>
+                                            <td><?php echo $row['meta_keywords'];?></td>
+                                            <td><?php echo $row['meta_desc'];?></td>
                                             <td><?php if ($row['status']==0) { echo "Active" ;} else{ echo "In Active" ;}?></td>
                                             <td><a href=" edit_content_pages.php?uid=<?php echo $row['id'];?>"><i class="material-icons dp48">edit</i></a><a class="click_view" data-modalId="<?php echo $row['id']?>" href="#"><i class="material-icons dp48">visibility</i></a>
                                             <div id="myModal_<?php echo $row['id']; ?>" class="modal fade" >
@@ -38,6 +44,9 @@
                                                     <div class="modal-body" >
                                                         <h5 class="modal-title-set"><b>Title :</b><?php echo $row['title'];?></h5>
                                                         <h5 class="modal-title-set"><b>Description :</b><?php echo strip_tags($row['description']);?></h5>
+                                                        <h5 class="modal-title-set"><b>Meta title :</b><?php echo $row['meta_title'];?></h5>
+                                                        <h5 class="modal-title-set"><b>Meta keywords :</b><?php echo $row['meta_keywords'];?></h5>
+                                                        <h5 class="modal-title-set"><b>Meta description :</b><?php echo $row['meta_desc'];?></h5>
                                                    </div>
                                                     <div class="modal-footer" >
                                                           <button type="button" class="btn" data-dismiss="modal" style="background-color:#f00; color:#fff">Close</button>

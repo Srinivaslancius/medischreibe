@@ -8,9 +8,12 @@
 
             $title = $_POST['title'];
             $description = $_POST['description'];
+            $m_title = $_POST['meta_title'];
+            $m_keywords = $_POST['meta_keywords'];
+            $m_desc = $_POST['meta_desc'];
             $status = $_POST['status'];                                                    
 
-             $sql = "INSERT INTO content_pages (`title`, `description`, `status`) VALUES ('$title', '$description', '$status')";
+             $sql = "INSERT INTO `content_pages` (`title`, `description`, `meta_title`,`meta_keywords`,`meta_desc`,`status`) VALUES ('$title', '$description', '$m_title','$m_keywords','$m_desc','$status')";
             if($conn->query($sql) === TRUE){
                echo "<script>alert('Data Updated Successfully');window.location.href='content_pages.php';</script>";
             } else {
@@ -43,7 +46,21 @@
                                         <textarea name="description" required id="description"></textarea>
                                     </div>
                                 </div>              
-                                
+                                <div class="input-field col s12">
+                                    <input id="meta_title" autofocus="autofocus" type="text" class="validate" name="meta_title" required>
+                                    <label for="title">Meta title </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_keywords" autofocus="autofocus" type="text" class="validate" name="meta_keywords" required>
+                                    <label for="title">meta keywords </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_desc" autofocus="autofocus" type="text" class="validate" name="meta_desc" required>
+                                    <label for="title">meta description </label>
+                                </div>
+
 
                                 <div class="input-field col s12">
                                     <select name="status" required>

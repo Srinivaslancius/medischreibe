@@ -261,7 +261,7 @@
                 <div class="container">
                     <div class="title-area">
                         <span class="sub-title">Treat With<span> Medischreibe</span></span>
-                        <h2 class="title title-bar">Medischreibe departments</h2>
+                        <h2 class="title title-bar">Medischreibe services</h2>
                     </div> 
                 </div>  
                 <div class="container">
