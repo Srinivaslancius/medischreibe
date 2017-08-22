@@ -170,6 +170,337 @@
                     </div> -->
 
                       <!-- Schedule 1 Area Start Here -->
+                           <!-- Best Treatment Area Start Here -->
+            <div class="treatment-area">
+                <div class="container">
+                    <div class="title-area">
+                        <span class="sub-title">Tag Line<span>Comes Here</span></span>
+                        <h2 class="title title-bar">What do we do for our clients</h2>
+                    </div> 
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <ul class="treatment-title-wrapper">
+                                <li class="active">
+                                    <a href="#General" data-toggle="tab" aria-expanded="false">
+                                        <div class="treatment-icon">
+                                            <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="treatment-content">
+                                            <h3>Plan</h3>
+                                            <p>We help you plan for the conferences, events you would like to hold.</p>
+                                        </div> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#Infusion" data-toggle="tab" aria-expanded="false">
+                                        <div class="treatment-icon">
+                                            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="treatment-content">
+                                            <h3>Execute</h3>
+                                            <p>We will take care of the execution process. We provide end-to-end services, from setting up conference, inviting delegates, managing invitees etc.</p>
+                                        </div>
+                                    </a> 
+                                </li>
+                                <li>
+                                    <a href="#Hospire" data-toggle="tab" aria-expanded="false">
+                                        <div class="treatment-icon">
+                                            <i class="fa fa-user-md" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="treatment-content">
+                                            <h3>Promote</h3>
+                                            <p>Your conference or event get 100% coverage and promotion it yearns for.</p>
+                                        </div> 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div class="tab-content treatment-details-wrapper">
+                                <div class="tab-pane fade active in" id="General">
+                                    <div class="treatment-content">
+                                        <img src="img/treatment/1.jpg" class="img-responsive" alt="service">
+                                        <div class="treatment-content-bottom">
+                                            <div class="treatment-content-details">
+                                                <h3>About Us</h3>
+                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
+                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                            </div>
+                                            <div class="treatment-content-award">
+                                                <ul>
+                                                    <li>
+                                                        <span class="about-counter" data-num="25">25</span>
+                                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="70">70</span>
+                                                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="80">80</span>
+                                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="30">30</span>
+                                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="Infusion">
+                                    <div class="treatment-content">
+                                        <img src="img/treatment/1.jpg" class="img-responsive" alt="service">
+                                        <div class="treatment-content-bottom">
+                                            <div class="treatment-content-details">
+                                                <h3>About Us</h3>
+                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
+                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                            </div>
+                                            <div class="treatment-content-award">
+                                                <ul>
+                                                    <li>
+                                                        <span class="about-counter" data-num="25">25</span>
+                                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="70">70</span>
+                                                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="80">80</span>
+                                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="30">30</span>
+                                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="Hospire">
+                                    <div class="treatment-content">
+                                        <img src="img/treatment/1.jpg" class="img-responsive" alt="service">
+                                        <div class="treatment-content-bottom">
+                                            <div class="treatment-content-details">
+                                                <h3>About Us</h3>
+                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
+                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                            </div>
+                                            <div class="treatment-content-award">
+                                                <ul>
+                                                    <li>
+                                                        <span class="about-counter" data-num="25">25</span>
+                                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="70">70</span>
+                                                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="80">80</span>
+                                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="30">30</span>
+                                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="Pregnancy">
+                                    <div class="treatment-content">
+                                        <img src="img/treatment/1.jpg" class="img-responsive" alt="service">
+                                        <div class="treatment-content-bottom">
+                                            <div class="treatment-content-details">
+                                                <h3>About Us</h3>
+                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
+                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                            </div>
+                                            <div class="treatment-content-award">
+                                                <ul>
+                                                    <li>
+                                                        <span class="about-counter" data-num="25">25</span>
+                                                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="70">70</span>
+                                                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="80">80</span>
+                                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="about-counter" data-num="30">30</span>
+                                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                                        <p>Sample</p>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>  
+            </div> 
+            <!-- Best Treatment Area End Here -->
+
+
+            <!-- Service 2 Area Start Here -->
+            <div class="service2-area bg-lightPrimary">
+                <div class="container">
+                    <div class="title-area">
+                        <span class="sub-title2">How We<span> Work</span></span>
+                        <h2 class="title title-bar">Medischreibe Services</h2>
+                    </div> 
+                </div>
+                <div class="container">
+                    <div class="row">                       
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <ul class="service-title-wrapper-left">
+                                <li>
+                                    <div class="service-content">
+                                        <h3><a href="#Gynecological" data-toggle="tab" aria-expanded="false">Cardiology</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                    <div class="service-icon">
+                                        <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li class="active">
+                                    <div class="service-content">
+                                        <h3><a href="#Checkup" data-toggle="tab" aria-expanded="false">Oncology</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                    <div class="service-icon">
+                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="service-content">
+                                        <h3><a href="#Surgery" data-toggle="tab" aria-expanded="false">Surgery</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                    <div class="service-icon">
+                                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="tab-content servise-details-wrapper">
+                                <div class="tab-pane fade" id="Gynecological">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>Cardiology</h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div> 
+                                <div class="tab-pane fade active in" id="Checkup">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>Oncology</h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div> 
+                                <div class="tab-pane fade" id="Surgery">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>Surgery </h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="General2">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>CNS</h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="Ambulance">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>Pulmonary</h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div>
+                                <div class="tab-pane fade" id="Diseases">
+                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                    <div class="service-details-content">
+                                        <h3>Hematology</h3>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </div> 
+                                </div>
+                            </div> 
+                        </div> 
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <ul class="service-title-wrapper-right">
+                                <li>
+                                    <div class="service-icon">
+                                        <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3><a href="#General2" data-toggle="tab" aria-expanded="false">CNS</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="service-icon">
+                                        <i class="fa fa-ambulance" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3><a href="#Ambulance" data-toggle="tab" aria-expanded="false">Pulmonary</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                </li>
+                                <li>
+                                     <div class="service-icon">
+                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="service-content">
+                                        <h3><a href="#Diseases" data-toggle="tab" aria-expanded="false">Hematology</a></h3>
+                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div> 
+                    </div> 
+                </div> 
+            </div>
+            <!-- Service 2 Area Start Here --> 
+
             <div class="schedule-area">
                 <div class="container">
                     <div class="row table-wrapper2">

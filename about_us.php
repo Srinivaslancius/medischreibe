@@ -95,7 +95,7 @@
                                         </div>
                                         <div class="video-content">
                                             <h3><a href=""><?php echo $getCreativity['title']?></h3>
-                                            <p><?php echo $getCreativity['description']?></p>
+                                            <p><?php echo substr($getCreativity['description'],0,150)?></p>
                                         </div> 
                                     </a>
                                 </li>
@@ -107,7 +107,7 @@
                                         </div>
                                         <div class="video-content">
                                             <h3><a href=""><?php echo $getMotivation['title']?></a></h3>
-                                            <p><?php echo $getMotivation['description']?></p>
+                                            <p><?php echo substr($getMotivation['description'],0,150)?></p>
                                         </div>
                                     </a> 
                                 </li>
