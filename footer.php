@@ -10,7 +10,8 @@
                                     </div>
                                     <ul class="corporate-address">
                                         <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Tel:<?php echo $getSiteSettingsData['mobile']; ?>"><?php echo $getSiteSettingsData['mobile']; ?> </a></li>
-                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="<?php echo $getSiteSettingsData['email'];?>">info@medisripe.com</a></li>
+                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:<?php echo $getSiteSettingsData['email'];?>"><?php echo $getSiteSettingsData['email'];?></a></li>
+                                        <!-- <p><a href="mailto:<?php echo $getSiteSettingsData['email']; ?>"><?php echo $getSiteSettingsData['email']; ?></a></p> -->
                                         
                                     </ul>
                                     
