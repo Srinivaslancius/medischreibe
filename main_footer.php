@@ -39,11 +39,16 @@
         <!-- Date Time Picker Js -->
         <script src="js/jquery.datetimepicker.full.min.js" type="text/javascript"></script>
 
+        <!-- Magic Popup js -->
+        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+
         <!-- Validator js -->
         <script src="js/validator.min.js" type="text/javascript"></script>
         
         <!-- Custom Js -->
         <script src="js/main.js" type="text/javascript"></script>
+
+
 
     </body>
 </html>

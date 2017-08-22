@@ -34,6 +34,9 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
         <!-- Owl Caousel CSS -->
         <link rel="stylesheet" href="vendor/OwlCarousel/owl.carousel.min.css">
         <link rel="stylesheet" href="vendor/OwlCarousel/owl.theme.default.min.css">
+
+        <!-- Magic popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
         
         <!-- Main Menu CSS -->      
         <link rel="stylesheet" href="css/meanmenu.min.css">
@@ -44,6 +47,8 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
 
         <!-- Datetime Picker Style CSS -->
         <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+
+
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="style.css">
