@@ -1,5 +1,11 @@
 
+
 <?php include_once "main_header.php"; ?>
+
+<!-- Magic popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+
 <?php $getAboutData = getIndividualDetails('4',"content_pages","id");  ?>
 <?php $getAllActiveKeyPractices = getAllDataCheckActive('key_practices',0); ?>    
 <?php $getAllActiveKeyPractices1 = getAllDataCheckActive('key_practices',0); ?>  
@@ -91,7 +97,7 @@
 
                                     <a href="#General" data-toggle="tab" aria-expanded="false">
                                         <div class="video-icon">
-                                            <i class="fa fa-stethoscope" aria-hidden="false"></i>
+                                            <i class="fa fa-stethoscope" aria-hidden="true"></i>
                                         </div>
                                         <div class="video-content">
                                             <h3><a href=""><?php echo $getCreativity['title']?></h3>
@@ -140,3 +146,6 @@
             <!--  Video Area End Here -->
           
    <?php include_once 'main_footer.php';?>
+
+   <!-- Magic Popup js -->
+        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
