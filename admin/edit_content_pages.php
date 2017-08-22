@@ -8,10 +8,13 @@ $id = $_GET['uid'];
     } else  {            
 
     $title = $_POST['title'];  
-    $description = $_POST['description'];  
+    $description = $_POST['description'];
+    $m_title = $_POST['meta_title'];
+    $m_keywords = $_POST['meta_keywords'];
+    $m_desc = $_POST['meta_desc'];  
     $status = $_POST['status'];
     
-        $sql = "UPDATE `content_pages` SET title = '$title', description = '$description', status='$status' WHERE id = '$id' ";
+        $sql = "UPDATE `content_pages` SET title = '$title', description = '$description',  meta_title='$m_title', meta_keywords='$m_keywords', meta_desc='$m_desc', status='$status'   WHERE id = '$id' ";
         if($conn->query($sql) === TRUE){
            echo "<script>alert('Data Updated Successfully');window.location.href='content_pages.php';</script>";
         } else {
@@ -42,6 +45,20 @@ $id = $_GET['uid'];
                                     <textarea name="description" required id="description"><?php echo $getContents1['description'];?></textarea>
                                 </div>
 
+                                <div class="input-field col s12">
+                                    <input id="meta_title" type="text" class="validate" name="meta_title" required value="<?php echo $getContents1['meta_title'];?>">
+                                    <label for="title">Meta title </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_keywords" type="text" class="validate" name="meta_keywords" required value="<?php echo $getContents1['meta_keywords'];?>">
+                                    <label for="title">meta keywords </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_desc" type="text" class="validate" name="meta_desc" required value="<?php echo $getContents1['meta_desc'];?>">
+                                    <label for="title">meta description </label>
+                                </div>
                                 <div class="input-field col s12">
                                     <select name="status" required>
                                         <option value="" disabled selected>Choose your status</option>

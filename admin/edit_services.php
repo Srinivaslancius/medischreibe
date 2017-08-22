@@ -10,6 +10,9 @@ $id = $_GET['uid'];
             $status = $_POST['status'];
             $title = $_POST['title'];
             $description = $_POST['description'];
+            $m_title = $_POST['meta_title'];
+            $m_keywords = $_POST['meta_keywords'];
+            $m_desc = $_POST['meta_desc']; 
             if($_FILES["fileToUpload"]["name"]!='') {
                                              
                 $fileToUpload = $_FILES["fileToUpload"]["name"];               
@@ -21,7 +24,7 @@ $id = $_GET['uid'];
                 //Send parameters for img val,tablename,clause,id,imgpath for image ubnlink from folder
 
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "UPDATE `services` SET title = '$title', description = '$description' ,image = '$fileToUpload', status='$status' WHERE id = '$id' ";
+                    $sql = "UPDATE `services` SET title = '$title', description = '$description' ,image = '$fileToUpload', meta_title='$m_title', meta_keywords='$m_keywords', meta_desc='$m_desc'   ,status='$status' WHERE id = '$id' ";
                     if($conn->query($sql) === TRUE){
                        echo "<script>alert('Data Updated Successfully');window.location.href='services.php';</script>";
                     } else {
@@ -75,6 +78,21 @@ $id = $_GET['uid'];
                                 <div class="input-field col s6">
                                    Banner : <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" onchange="loadFile(event)">
                                    <p>(Please upload this size images 1920*800)</p>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_title" type="text" class="validate" name="meta_title" required value="<?php echo $getBanners1['meta_title'];?>">
+                                    <label for="title">Meta title </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_keywords" type="text" class="validate" name="meta_keywords" required value="<?php echo $getBanners1['meta_keywords'];?>">
+                                    <label for="title">meta keywords </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_desc" type="text" class="validate" name="meta_desc" required value="<?php echo $getBanners1['meta_desc'];?>">
+                                    <label for="title">meta description </label>
                                 </div>
 
                                 <div class="input-field col s12">

@@ -9,6 +9,9 @@
             $title = $_POST['title'];
             $description = $_POST['description'];
             $fileToUpload = $_FILES["fileToUpload"]["name"];
+            $m_title = $_POST['meta_title'];
+            $m_keywords = $_POST['meta_keywords'];
+            $m_desc = $_POST['meta_desc'];
             $status = $_POST['status'];
             
             if($fileToUpload!='') {
@@ -18,7 +21,7 @@
                 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "INSERT INTO services (`title`,`description`, `image`, `status`) VALUES ('$title', '$description','$fileToUpload','$status')";
+                    $sql = "INSERT INTO services (`title`, `description`, `image`,`meta_title`, `meta_keywords`, `meta_desc`,  `status`) VALUES ('$title', '$description','$fileToUpload', '$m_title','$m_keywords','$m_desc' ,'$status')";
                     if($conn->query($sql) === TRUE){
                        echo "<script>alert('Data Updated Successfully');window.location.href='services.php';</script>";
                     } else {
@@ -61,6 +64,21 @@
                                    <img id="output" height="70" width="70"/> 
                                    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" onchange="loadFile(event)" required>
                                    <p>(Please upload this size images 1920*800)</p>        
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_title" autofocus="autofocus" type="text" class="validate" name="meta_title" required>
+                                    <label for="title">Meta title </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_keywords" autofocus="autofocus" type="text" class="validate" name="meta_keywords" required>
+                                    <label for="title">meta keywords </label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="meta_desc" autofocus="autofocus" type="text" class="validate" name="meta_desc" required>
+                                    <label for="title">meta description </label>
                                 </div>
 
                                 <div class="input-field col s12">

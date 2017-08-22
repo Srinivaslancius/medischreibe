@@ -6,7 +6,7 @@
                         <h2 class="title-bar2">contact us</h2>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <!-- <li><a href="#">Page</a></li> -->
+                            <li><a href="#">Page</a></li>
                             <li>contact</li>
                         </ul>
                     </div>

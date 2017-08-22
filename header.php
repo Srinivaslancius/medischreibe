@@ -40,7 +40,7 @@
                                                 <li><a href="#">Services</a>
                                                     <ul>
                                                     <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
-                                                        <li><a href="#"><?php echo $getAllMenus['title']; ?></a></li>
+                                                        <li><a href="service_details.php?id=<?php echo $getAllMenus['id']; ?>"><?php echo $getAllMenus['title']; ?></a></li>
                                                     <?php } ?>                                                        
                                                     </ul>
                                                 </li>

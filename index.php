@@ -261,7 +261,7 @@
                 <div class="container">
                     <div class="title-area">
                         <span class="sub-title">Treat With<span> Medischreibe</span></span>
-                        <h2 class="title title-bar">Medischreibe departments</h2>
+                        <h2 class="title title-bar">Medischreibe services</h2>
                     </div> 
                 </div>  
                 <div class="container">
@@ -285,7 +285,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <h3><?php echo $getAllData1['title']; ?></h3>
                             <?php echo $getAllData1['description']; ?>
-                            <a href="service_details.php" class="btn-hover-ghost-accent">visit service</a>
+                            <a href="service_details.php?id=<?php echo $getAllData1['id']; ?>" class="btn-hover-ghost-accent">visit service</a>
                         </div>  
                     </div> 
                     <?php $i++; } ?>                 
