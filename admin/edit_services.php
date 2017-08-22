@@ -24,7 +24,7 @@ $id = $_GET['uid'];
                 //Send parameters for img val,tablename,clause,id,imgpath for image ubnlink from folder
 
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                    $sql = "UPDATE `services` SET title = '$title', description = '$description' ,image = '$fileToUpload', meta_title='$m_title', meta_keywords='$m_keywords', meta_desc='$m_desc'   ,status='$status' WHERE id = '$id' ";
+                    $sql = "UPDATE services SET title = '$title', description = '$description' ,image = '$fileToUpload', meta_title='$m_title', meta_keywords='$m_keywords', meta_desc='$m_desc'   ,status='$status' WHERE id = '$id' ";
                     if($conn->query($sql) === TRUE){
                        echo "<script>alert('Data Updated Successfully');window.location.href='services.php';</script>";
                     } else {
