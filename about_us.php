@@ -1,5 +1,11 @@
 
+
 <?php include_once "main_header.php"; ?>
+
+<!-- Magic popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+
 <?php $getAboutData = getIndividualDetails('4',"content_pages","id");  ?>
 <?php $getAllActiveKeyPractices = getAllDataCheckActive('key_practices',0); ?>    
 <?php $getAllActiveKeyPractices1 = getAllDataCheckActive('key_practices',0); ?>  
@@ -139,3 +145,6 @@
             <!--  Video Area End Here -->
           
    <?php include_once 'main_footer.php';?>
+
+   <!-- Magic Popup js -->
+        <script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
