@@ -37,19 +37,14 @@
                                         <nav>
                                             <ul>
                                                 <li <?php if($page_name == 'index.php') {  ?> class="active" <?php } ?>> <a href="index.php">Home</a></li>
-
                                                 <li <?php if($page_name == 'about_us.php') {  ?> class="active" <?php } ?>> <a href="about_us.php">About Us</a></li>
-                                                <li <?php if($page_name == 'service_details.php') {  ?> class="active" <?php } ?>><a href="service_details.php">Services</a>
-                                                <li <?php if($page_name == 'about_us.php') {  ?>class="active" <?php } ?>> <a href="about_us.php">About Us</a></li>
                                                 <li <?php if($page_name == 'service_details.php') {  ?>class="active" <?php } ?>> <a href="#">Services</a>
-
                                                     <ul>
                                                     <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
                                                         <li><a href="service_details.php?id=<?php echo $getAllMenus['id']; ?>"><?php echo $getAllMenus['title']; ?></a></li>
                                                     <?php } ?>                                                        
                                                     </ul>
                                                 </li>
-                                                
                                                 <li <?php if($page_name == 'contact_us.php') {  ?>class="active" <?php } ?>><a href="contact_us.php">Contact</a></li>
                                             </ul>
                                         </nav>
