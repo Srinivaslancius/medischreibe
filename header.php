@@ -1,10 +1,4 @@
 <?php $getMenus = getAllDataCheckActive('services',0); ?>
-
-<?php
-    $currentFile = $_SERVER["PHP_SELF"];
-    $parts = Explode('/', $currentFile);
-    $page_name = $parts[count($parts) - 1];
-?>
 <div class="header2-area">
                     <div class="header-top-area">
                         <div class="container">
@@ -43,7 +37,7 @@
                                         <nav>
                                             <ul>
                                                 <li <?php if($page_name == 'index.php') {  ?> class="active" <?php } ?>> <a href="index.php">Home</a></li>
-                                                <li <?php if($page_name == 'about_us.php') {  ?>class="active" <?php } ?>> <a href="about_us.php">About Us</a></li>
+                                                <li <?php if($page_name == 'about_us.php') {  ?> class="active" <?php } ?>> <a href="about_us.php">About Us</a></li>
                                                 <li <?php if($page_name == 'service_details.php') {  ?>class="active" <?php } ?>> <a href="#">Services</a>
                                                     <ul>
                                                     <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
@@ -51,7 +45,6 @@
                                                     <?php } ?>                                                        
                                                     </ul>
                                                 </li>
-                                                
                                                 <li <?php if($page_name == 'contact_us.php') {  ?>class="active" <?php } ?>><a href="contact_us.php">Contact</a></li>
                                             </ul>
                                         </nav>
