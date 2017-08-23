@@ -17,7 +17,7 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
        $getMetaData = getIndividualDetails($id,"services","id");
     }
 ?>
-
+<!doctype html>
 <html class="no-js" lang="">
 <head>
         <meta charset="utf-8">
