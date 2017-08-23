@@ -12,8 +12,7 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
 <?php
     if($page_name == 'about_us.php'){
         $getMetaData = getIndividualDetails(4,"content_pages","id");
-    }
-     else{
+    }  else{
        $id= isset($_GET['id']); 
        $getMetaData = getIndividualDetails($id,"services","id");
     }
