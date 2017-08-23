@@ -76,7 +76,7 @@
             </div>
             <!-- Our History Area End Here -->
             <!-- Video Area Start Here -->
-            <div class="video-area">
+             <div class="video-area">
                 <div class="video-img-holder-left" style="background-image: url('img/banner/6.jpg');"></div>                    
                 <div class="video-img-holder-right" style="background-image: url('img/banner/7.jpg');"></div> 
                 <div class="container">
@@ -87,39 +87,38 @@
                                 <h3 style="color: #fff;">Scientific communications</h3>
                                 <p style="color: #fff;">We are  passionate about making scientific communications more simplified, communicating science in a much more impressive way across multiple channels.</p>
                                 <li class="active">
-                                    <?php $getCreativity = getIndividualDetails('3',"content_pages","id");  ?>
-
                                     <a href="#General" data-toggle="tab" aria-expanded="false">
                                         <div class="video-icon">
-                                            <i class="fa fa-stethoscope" aria-hidden="false"></i>
+                                            <i class="fa fa-stethoscope" aria-hidden="true"></i>
                                         </div>
+                                         <?php $getCreativity = getIndividualDetails('3',"content_pages","id");  ?>
                                         <div class="video-content">
-                                            <h3><a href=""><?php echo $getCreativity['title']?></h3>
-                                            <p><?php echo substr($getCreativity['description'],0,150)?></p>
+                                            <h3><?php echo $getCreativity['title']?></h3>
+                                            <?php echo substr($getCreativity['description'],0,150)?>
                                         </div> 
                                     </a>
                                 </li>
                                 <li>
-                                    <?php $getMotivation = getIndividualDetails('2',"content_pages","id");  ?>
                                     <a href="#Infusion" data-toggle="tab" aria-expanded="false">
                                         <div class="video-icon">
                                             <i class="fa fa-ambulance" aria-hidden="true"></i>
                                         </div>
+                                        <?php $getMotivation = getIndividualDetails('2',"content_pages","id");  ?>
                                         <div class="video-content">
-                                            <h3><a href=""><?php echo $getMotivation['title']?></a></h3>
-                                            <p><?php echo substr($getMotivation['description'],0,150)?></p>
+                                            <h3><?php echo $getMotivation['title']?></h3>
+                                            <?php echo substr($getMotivation['description'],0,150)?>
                                         </div>
                                     </a> 
                                 </li>
                                 <li>
-                                    <?php $getTranscendingSuccess = getIndividualDetails('1',"content_pages","id");  ?>
                                     <a href="#Hospire" data-toggle="tab" aria-expanded="false">
                                         <div class="video-icon">
                                             <i class="fa fa-user-md" aria-hidden="true"></i>
                                         </div>
+                                        <?php $getTranscendingSuccess = getIndividualDetails('1',"content_pages","id");  ?>
                                         <div class="video-content">
-                                            <h3><a href=""><?php echo $getTranscendingSuccess['title']?></a></h3>
-                                            <p><?php echo $getTranscendingSuccess['description']?></p>
+                                            <h3><?php echo $getTranscendingSuccess['title']?></h3>
+                                            <?php echo $getTranscendingSuccess['description']?>
                                         </div> 
                                     </a>
                                 </li>
