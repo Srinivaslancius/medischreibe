@@ -60,6 +60,6 @@
                 </div>
                 <div class="footer-area-bottom">
                     <div class="container">
-                        <p>&copy; 2017 medischreibe. All rights reserved. Design & Develop by<a target="_blank" href="#"> Lancius Solutions</a></p>
+                        <p>&copy; 2017 medischreibe. All rights reserved. Design & Develop by<a target="_blank" href="https://www.lanciussolutions.com/"> Lancius Solutions</a></p>
                     </div>
                 </div>
