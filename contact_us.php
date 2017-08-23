@@ -6,7 +6,6 @@
                         <h2 class="title-bar2">contact us</h2>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Page</a></li>
                             <li>contact</li>
                         </ul>
                     </div>
@@ -14,16 +13,70 @@
             </div> 
             <!-- Inner Page Banner Area End Here -->
             <!-- Contact Page Area Start Here -->
+
+            <?php $getContactData = getIndividualDetails('5',"content_pages","id"); 
+              $address =$getContactData['description']; // Google HQ
+              $prepAddr = str_replace(' ','+',$address);
+              $geocode=file_get_contents('http://maps.google.com/maps/api/geocode/json?address='.$prepAddr.'&sensor=false');
+              $output= json_decode($geocode);
+              $latitude = $output->results[0]->geometry->location->lat;
+              $longitude = $output->results[0]->geometry->location->lng;?>
             <div class="contact-page-area">
                 <div class="container-fluid">
                     <div class="row">                               
-                        <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">                               
-                            
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2882374991705!2d78.3790404144398!3d17.445912988043627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93de32844057%3A0x7fbdb09406d44f7a!2sLancius+IT+Solutions!5e0!3m2!1sen!2sin!4v1502975594292" width="100%"height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                        <div id="map" style="display:block; height: 450px;"></div>                               
+                            <div id="message"> <?php echo $getContactData['description']; ?></div>
+                            <script src="http://maps.google.com/maps/api/js?key=AIzaSyBoFCHHmjZTbJB-mHO7qgVLWP707VFohvk"
+                                type="text/javascript"></script>
+                            <script type="text/javascript">
+                            var map;
+                            var infowindow = new google.maps.InfoWindow({
+                                content: document.getElementById('message')
+                            });
+                            function initialize() {
+                                // Set static latitude, longitude value
+                                var latlng = new google.maps.LatLng(<?php echo $latitude; ?>, <?php echo $longitude; ?>);
+                                // Set map options
+                                var myOptions = {
+                                    zoom: 16,
+                                    center: latlng,
+                                    panControl: true,
+                                    zoomControl: true,
+                                    scaleControl: true,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                }
+                                // Create map object with options
+                                map = new google.maps.Map(document.getElementById("map"), myOptions);
+                            <?php
+
+
+                                    echo "addMarker(new google.maps.LatLng(".$latitude.", ".$longitude."), map);";
+                            ?>
+                            }
+                            function addMarker(latLng, map) {
+                                var marker = new google.maps.Marker({
+                                    position: latLng,
+                                    map: map,
+                                    draggable: true, // enables drag & drop
+                                    animation: google.maps.Animation.DROP
+                                });
+                                google.maps.event.addListener(marker, 'click', function() {
+                                    infowindow.open(map, marker);
+                                  });
+
+                                return marker;
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>   
                             
                         </div>
                     </div>
                 </div>
+
+
+
+                <!-- Contact Page Area Start Here -->
                 <div class="container">
                     <div class="row contact-wrapper">                       
                         <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
@@ -82,3 +135,8 @@
             </div>
             <!-- Contact Page Area End Here -->
           <?php include_once 'main_footer.php';?>
+
+
+
+
+          <!-- med/contactus_page -->

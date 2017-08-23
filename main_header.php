@@ -51,8 +51,7 @@ $getSiteSettingsData = getIndividualDetails('1',"site_settings","id");
         <link rel="stylesheet" href="vendor/OwlCarousel/owl.carousel.min.css">
         <link rel="stylesheet" href="vendor/OwlCarousel/owl.theme.default.min.css">
 
-        <!-- Magic popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
+        
         
         <!-- Main Menu CSS -->      
         <link rel="stylesheet" href="css/meanmenu.min.css">
