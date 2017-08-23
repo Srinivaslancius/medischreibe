@@ -42,9 +42,9 @@
                                     <div class="main-menu-area">
                                         <nav>
                                             <ul>
-                                                <li <?php if($page_name == 'index.php') {  ?>class="active" <?php } ?>> <a href="index.php">Home</a></li>
+                                                <li <?php if($page_name == 'index.php') {  ?> class="active" <?php } ?>> <a href="index.php">Home</a></li>
                                                 <li <?php if($page_name == 'about_us.php') {  ?>class="active" <?php } ?>> <a href="about_us.php">About Us</a></li>
-                                                <li <?php if($page_name == 'service_details.php') {  ?>class="active" <?php } ?>><a href="service_details.php">Services</a>
+                                                <li <?php if($page_name == 'service_details.php') {  ?>class="active" <?php } ?>> <a href="#">Services</a>
                                                     <ul>
                                                     <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
                                                         <li><a href="service_details.php?id=<?php echo $getAllMenus['id']; ?>"><?php echo $getAllMenus['title']; ?></a></li>
@@ -70,21 +70,19 @@
                                 <div class="mobile-menu">
                                     <nav id="dropdown">
                                         <ul>
-                                            <li><a href="index.php">Home</a></li>
-                                            <li><a href="about_us.php">About Us</a></li>
+                                            <li <?php if($page_name == 'index.php') {  ?>class="active" <?php } ?>> <a href="index.php">Home</a></li>
+                                            <li  <?php if($page_name == 'about_us.php') {  ?>class="active" <?php } ?>><a href="about_us.php">About Us</a></li>
                                             
                                             
-                                            <li><a href="#">Services</a>
+                                            <li <?php if($page_name == 'service_details.php') {  ?>class="active" <?php } ?>><a href="#">Services</a>
                                                 <ul>
-                                                    <li><a href="#">Service Type</a></li>
-                                                    <li><a href="#">Service Type</a></li>
-                                                    <li><a href="#">Service Type</a></li>
-                                                    <li><a href="#">Service Type</a></li>
-                                                    <li><a href="#">Service Type</a></li>
+                                                    <?php while($getAllMenus = $getMenus->fetch_assoc()) { ?>
+                                                        <li><a href="service_details.php?id=<?php echo $getAllMenus['id']; ?>"><?php echo $getAllMenus['title']; ?></a></li>
+                                                    <?php } ?> 
                                                 </ul>
                                             </li>
                                             
-                                            <li><a href="contact_us.php">Contact</a></li>
+                                            <li <?php if($page_name == 'contact_us.php') {  ?>class="active" <?php } ?>><a href="contact_us.php">Contact</a></li>
                                         </ul>                                        
                                     </nav>
                                 </div>           
@@ -98,19 +96,4 @@
 
 
 
-              <!--   <ul class="menu">
-                    <li <?php if($page_name == 'index.php') {  ?>class="current-menu-item" <?php } ?>><a href="index.php">Home</a></li>
-                    <li <?php if($page_name == 'about_us.php') {  ?>class="current-menu-item" <?php } ?>>
-                        <a href="about_us.php">About Us</a>
-                    </li>
-                    <li <?php if($page_name == 'courses.php') {  ?>class="current-menu-item" <?php } ?>>
-                        <a href="courses.php">Courses</a>
-                        
-                   </li>
-                    <li <?php if($page_name == 'student_verification.php') {  ?>class="current-menu-item" <?php } ?>>
-                        <a href="student_verification.php">Student Verification</a>
-                    </li>
-                    <li <?php if($page_name == 'contact_us.php') {  ?>class="current-menu-item" <?php } ?>>
-                        <a href="contact_us.php">Contact Us</a>
-                    </li>
-                </ul>  -->
+          
