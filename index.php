@@ -187,9 +187,10 @@
                                         <div class="treatment-icon">
                                             <i class="fa fa-heartbeat" aria-hidden="true"></i>
                                         </div>
+                                        <?php $getPlan = getIndividualDetails('6',"content_pages","id");  ?>
                                         <div class="treatment-content">
-                                            <h3>Plan</h3>
-                                            <p>We help you plan for the conferences, events you would like to hold.</p>
+                                            <h3><?php echo $getPlan['title']?></h3>
+                                            <p><?php echo substr($getPlan['description'],0,50)?></p>
                                         </div> 
                                     </a>
                                 </li>
@@ -198,9 +199,10 @@
                                         <div class="treatment-icon">
                                             <i class="fa fa-stethoscope" aria-hidden="true"></i>
                                         </div>
+                                        <?php $getExecute = getIndividualDetails('7',"content_pages","id");  ?>
                                         <div class="treatment-content">
-                                            <h3>Execute</h3>
-                                            <p>We will take care of the execution process. We provide end-to-end services, from setting up conference, inviting delegates, managing invitees etc.</p>
+                                            <h3><?php echo $getExecute['title']?></h3>
+                                            <p><?php echo substr($getExecute['description'],0,50)?>.</p>
                                         </div>
                                     </a> 
                                 </li>
@@ -209,9 +211,10 @@
                                         <div class="treatment-icon">
                                             <i class="fa fa-user-md" aria-hidden="true"></i>
                                         </div>
+                                        <?php $getPromote = getIndividualDetails('8',"content_pages","id");  ?>
                                         <div class="treatment-content">
-                                            <h3>Promote</h3>
-                                            <p>Your conference or event get 100% coverage and promotion it yearns for.</p>
+                                            <h3><?php echo $getPromote['title']?></h3>
+                                            <p><?php echo substr($getPromote['description'],0,50)?></p>
                                         </div> 
                                     </a>
                                 </li>
@@ -226,8 +229,7 @@
                                         <div class="treatment-content-bottom">
                                             <div class="treatment-content-details">
                                                 <h3>About Us</h3>
-                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
-                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                                <p><?php echo $getPlan['description']?>.</p>
                                             </div>
                                             <div class="treatment-content-award">
                                                 <ul>
@@ -262,8 +264,7 @@
                                         <div class="treatment-content-bottom">
                                             <div class="treatment-content-details">
                                                 <h3>About Us</h3>
-                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
-                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                                <p><?php echo $getExecute['description']?>.</p>
                                             </div>
                                             <div class="treatment-content-award">
                                                 <ul>
@@ -298,8 +299,7 @@
                                         <div class="treatment-content-bottom">
                                             <div class="treatment-content-details">
                                                 <h3>About Us</h3>
-                                                <p>We, at Medischreibe, deliver a communication strategy that flawlessly answers all needs of healthcare industry. </p>
-                                                <p>Custom healthcare communications crafted and honed to perfection to make a real difference.</p>
+                                                <p><?php echo $getPromote['description']?></p>
                                             </div>
                                             <div class="treatment-content-award">
                                                 <ul>
