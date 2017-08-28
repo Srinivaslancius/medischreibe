@@ -9,7 +9,6 @@
                         <h2 class="title-bar2">About Us</h2>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Page</a></li>
                             <li>About Us</li>
                         </ul>
                     </div>
