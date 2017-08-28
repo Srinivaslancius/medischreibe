@@ -26,7 +26,9 @@
                                             <td><?php echo $i;?></td>
                                             <td><?php echo $row['title'];?></td>
                                             <td><img src="<?php echo $base_url . 'uploads/banner_images/'.$row['banner'] ?>" height="100" width="100"/></td>                        
-                                            <td><a href="edit_banners.php?bid=<?php echo $row['id']; ?>"><i class="material-icons dp48">edit</i></a><a class="click_view" data-modalId="<?php echo $row['id']?>" href="#"><i class="material-icons dp48">visibility</i></a><a href="delete_banners.php?bid=<?php echo $row['id']; ?>"><i class="material-icons dp48" onclick="return confirm('Are you sure you want to delete?')">delete</i></a></td>
+                                            <td><a href="edit_banners.php?bid=<?php echo $row['id']; ?>"><i class="material-icons dp48">edit</i></a><a class="click_view" data-modalId="<?php echo $row['id']?>" href="#"><i class="material-icons dp48">visibility</i></a><a href="#">
+          <span class="glyphicon glyphicon-trash"></span>
+        </a></td>
                                             <div id="myModal_<?php echo $row['id']; ?>" class="modal fade" >
                                             <div class="modal-dialog" Style="margin-top:10%;">
                                                 <div class="modal-content">
@@ -54,4 +56,8 @@
                 </div>
             </main>
          <?php include_once 'footer.php'; ?>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         
        

@@ -383,119 +383,57 @@
                 <div class="container">
                     <div class="row">                       
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <ul class="service-title-wrapper-left">
-                                <li>
+                           <ul class="service-title-wrapper-left">
+                                <?php $i=1;
+                                $sql ="SELECT * FROM services LIMIT 0,3";
+                                $result = $conn->query($sql);
+                                while($row=$result->fetch_assoc()){ ?>
+                                <li class="<?php if($i==1) { ?> active <?php } else { } ?>">
                                     <div class="service-content">
-                                        <h3><a href="#Gynecological" data-toggle="tab" aria-expanded="false">Cardiology</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                        <h3><a href="#<?php echo $row['id']?>" data-toggle="tab" aria-expanded="false"><?php echo $row['title']?></a></h3>
+                                        <p><?php echo $row['description']?></p>
                                     </div> 
                                     <div class="service-icon">
                                         <i class="fa fa-heartbeat" aria-hidden="true"></i>
                                     </div>
                                 </li>
-                                <li class="active">
-                                    <div class="service-content">
-                                        <h3><a href="#Checkup" data-toggle="tab" aria-expanded="false">Oncology</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                    <div class="service-icon">
-                                        <i class="fa fa-stethoscope" aria-hidden="true"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service-content">
-                                        <h3><a href="#Surgery" data-toggle="tab" aria-expanded="false">Surgery</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                    <div class="service-icon">
-                                        <i class="fa fa-user-md" aria-hidden="true"></i>
-                                    </div>
-                                </li>
+                                <?php $i++;}?>
                             </ul>
                         </div> 
+                        <?php $getAllActiveServices5 = getAllDataCheckActive('services',0); ?> 
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="tab-content servise-details-wrapper">
-                                <div class="tab-pane fade" id="Gynecological">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
+                                <?php $i=1; while($getAllData5=$getAllActiveServices5->fetch_assoc()) { ?>
+                                <div class="tab-pane fade <?php if($i==6) { ?>  active in <?php } ?>"  id="<?php echo $getAllData5['id']; ?>" >
+                                    <img src="uploads/services_images/<?php echo $getAllData5['image']; ?>" alt="department" class="img-responsive">
                                     <div class="service-details-content">
-                                        <h3>Cardiology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div> 
-                                <div class="tab-pane fade active in" id="Checkup">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Oncology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div> 
-                                <div class="tab-pane fade" id="Surgery">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Surgery </h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
+                                        <h3><?php echo $getAllData5['title']; ?></h3>
+                                        <p><?php echo $getAllData5['description']; ?></p>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </div> 
                                 </div>
-                                <div class="tab-pane fade" id="General2">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>CNS</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="Ambulance">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Pulmonary</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
-                                <div class="tab-pane fade" id="Diseases">
-                                    <img src="img/service/1.jpg" class="img-responsive" alt="service">
-                                    <div class="service-details-content">
-                                        <h3>Hematology</h3>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium natus error sit. Auteuisd irure dolor in.</p>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </div> 
-                                </div>
+                                <?php $i++; } ?> 
                             </div> 
                         </div> 
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <ul class="service-title-wrapper-right">
+
+                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                           <ul class="service-title-wrapper-right">
+                            <?php $i=1; 
+                                $sql ="SELECT * FROM services LIMIT 3,5";
+                                $result = $conn->query($sql);
+                                while($row=$result->fetch_assoc()){ ?>
                                 <li>
                                     <div class="service-icon">
                                         <i class="fa fa-wheelchair" aria-hidden="true"></i>
                                     </div>
                                     <div class="service-content">
-                                        <h3><a href="#General2" data-toggle="tab" aria-expanded="false">CNS</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
+                                        <h3><a href="#<?php echo $row['id']?>" data-toggle="tab" aria-expanded="false"><?php echo $row['title']?></a></h3>
+                                        <p><?php echo $row['description']?></p>
                                     </div> 
                                 </li>
-                                <li>
-                                    <div class="service-icon">
-                                        <i class="fa fa-ambulance" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h3><a href="#Ambulance" data-toggle="tab" aria-expanded="false">Pulmonary</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                </li>
-                                <li>
-                                     <div class="service-icon">
-                                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h3><a href="#Diseases" data-toggle="tab" aria-expanded="false">Hematology</a></h3>
-                                        <p>Sed ut perspiciatis unde omnis iste is the  natus error sit voluptatem</p>
-                                    </div> 
-                                </li>
+                            <?php $i++;}?>
                             </ul>
-                        </div> 
+                        </div>
                     </div> 
                 </div> 
             </div>
@@ -606,6 +544,7 @@
                         </li>
                         <?php $i++; } ?>                        
                     </ul>
+
                 </div>  
                 <div class="container tab-content">
                     <?php $i=1; while($getAllData1=$getAllActiveServices1->fetch_assoc()) { ?>
